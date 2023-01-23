@@ -1,0 +1,13 @@
+
+-----------------------------------------------------------------
+DECOMPOSITION OF SUPEROCC EVOLUTION - EXPLANATION VARIABLES
+-----------------------------------------------------------------
+
+ begin_distr: the initial distribution (1984)
+ end_distr_d: the end distribution in the data(2012)
+ end_distr_m: end distribution in the model
+ decomp_exofl_m: the change in size through retirement/entry in diff. occ
+ decomp_endofl_m: the change in occsize through net mobility of the unempl.
+ decomp_endo_gd_m: the part of endofl change occuring when urate<median
+ decomp_endo_bad_m: the part of endofl change occuring when urate>=median
+

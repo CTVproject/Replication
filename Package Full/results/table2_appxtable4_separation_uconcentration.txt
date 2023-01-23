@@ -1,0 +1,40 @@
+
+--------------------------------------------------------
+RELATIVE SEPARATION RATE YOUNG TO PRIME-AGED
+--------------------------------------------------------
+
+ equals 1.99441990378797
+        -> sep yng = .0089380311010304 and sep prime = .0044815192046843
+
+--------------------------------------------------------
+RELATIVE SEPARATION 1 YR POST-HIRE FROM U REL. TO ALL
+--------------------------------------------------------
+
+ equals 4.94363990094556
+        -> sep 12m post-hire = .2968132308779917 and sep 12m for emp = `.0600394116127311
+
+-----------------------------------------------------------
+FOOTNOTE 22 SEPARATION RISK POST-HIRE FOR OCC STAYER/MOVERS
+-----------------------------------------------------------
+
+(analytic weights assumed)
+
+    Variable |     Obs      Weight        Mean   Std. dev.       Min        Max
+-------------+-----------------------------------------------------------------
+eu_avemon~ve |  41,012  48664.9477    .0240325   .1531519          0          1
+eu_avemon~ay |  31,527  37021.6316    .0264427   .1604502          0          1
+
+where eu_avemonthly_12mposthire_move is the ave monthly separation risk
+in the first year post-hire of those who found a job out of unemployment
+in a different occupation than previously; 
+eu_avemonthly_12mposthire_stay is the corresponding stat for occ stayers
+above abbrev as eu_avemon~ve and eu_avemon~ay, respectively
+
+
+-----------------------------------------------------------
+UNEMPLOYMENT CONCENTRATION
+-----------------------------------------------------------
+
+.1222498254890106
+the statistic here is the proportion of the currently employed
+that will experience unemployment within the next 3 years

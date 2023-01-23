@@ -1,0 +1,57 @@
+
+--------------------------------------------------------
+PROBABILITY MISCODING 22 OCC, IN UNEMPLOYMENT
+--------------------------------------------------------
+
+ equals .0931516646313874
+
+--------------------------------------------------------
+PROBABILITY MISCODING MOG, w/out AGRIC & MGT
+--------------------------------------------------------
+
+ equals .0746667743416999
+
+-----------------------------------------------------------
+PROBABILITY MISCODING ACROSS 4 SUPEROCCS, NO AGRIC & MGT
+-----------------------------------------------------------
+
+ equals .0542615076284407 
+
+
+-----------------------------------------------------------
+WITHIN SUPEROCC MISCODING
+-----------------------------------------------------------
+
+ equals .0296477118581029 
+
+ where we take the average difference between the 22-occ MOG miscoding 
+ and miscoding across the 4 super-occupations, to find the within miscoding
+     2 measures of 22-occ miscoding, with mgt as in the excess mobility calibration
+     and without, as in the net mobility stats, we simply take the average measure
+ for the calibration
+
+-----------------------------------------------------------
+MISCODING ACROSS SUPEROCCS
+-----------------------------------------------------------
+
+
+miscode_rtnm[4,4]
+           c1         c2         c3         c4
+r1  .91344788  .03081548  .00891258  .01200273
+r2  .02121608  .94619679  .01908765  .00776579
+r3  .01089613   .0264022  .95434151  .03141926
+r4  .01063076  .00732213  .02757589  .95187554
+1=NRC, 2=RC, 3=NRM, 4=RM
+
+-----------------------------------------------------------
+DEGARBLING MISCODING ACROSS SUPEROCCS, GAMMAINV matrix
+-----------------------------------------------------------
+
+
+invmiscode_rtnm[4,4]
+            c1          c2          c3          c4
+r1   1.0958369  -.03533137  -.00914512  -.01322791
+r2   -.0242441   1.0582895   -.0207194  -.00764435
+r3  -.01145506  -.02864686   1.0495129   -.0342639
+r4   -.0117202  -.00691621  -.03014293   1.0517567
+1=NRC, 2=RC, 3=NRM, 4=RM

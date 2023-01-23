@@ -1,0 +1,107 @@
+-------------------------------------------------------------
+ TABLE 6 ONLINE APPENDIX, NUN DATA -- 5Q SMOOTHED
+-------------------------------------------------------------
+
+
+
+
+   ---pairwise correlation table--- 
+
+
+             | hp_lnu~5 hp_lva~5 hp_lti.. hp_q3~ep hp_q~r_q hp_q3_~w
+-------------+------------------------------------------------------
+hp_lnun_ex~5 |   1.0000 
+hp_lvacanc~5 |  -0.9210   1.0000 
+hp_lti~t_sm5 |  -0.9802   0.9799   1.0000 
+  hp_q3_lsep |   0.7886  -0.7863  -0.8027   1.0000 
+hp_q3_lj~r_q |  -0.9553   0.9353   0.9644  -0.8657   1.0000 
+hp_q3_loutpw |  -0.5164   0.6081   0.5736  -0.4285   0.4609   1.0000 
+ note: variables are in order:
+ (1) HP-filt log (smoothed) NUN rate (of those with earlier employment)
+ (2) HP-filt log (smoothed) vacancies
+ (3) HP-filt log (smoothed) implied (NUN-based) tightness 
+ (4) HP-filt log (smoothed) separation rate
+ (5) HP-filt log (smoothed) job finding rate from NUN-spells
+ (6) HP-filt log (smoothed) output per worker
+
+
+
+   ---standard deviations (4th column, same order)--- 
+
+
+    Variable |        Obs        Mean    Std. dev.       Min        Max
+-------------+---------------------------------------------------------
+hp_lnun_ex~5 |         82     .012303    .1138332  -.2014747   .2101361
+hp_lvacanc~5 |         82    .0047446    .1073028  -.2108707   .1664222
+hp_lti~t_sm5 |         82   -.0075584    .2144994  -.4193559   .3576322
+  hp_q3_lsep |         63   -.0037705    .0983118  -.3138703   .3525864
+hp_q3_lj~r_q |         64   -.0067896    .0809355  -.1670174   .1532511
+standard deviation: (6): output per worker over the entire sample
+
+    Variable |        Obs        Mean    Std. dev.       Min        Max
+-------------+---------------------------------------------------------
+   hp_loutpw |        120    .0007969    .0094064  -.0309227   .0263316
+
+
+   ---autocorrelations (same order)--- 
+
+autocorrelation: (1)
+(obs=76)
+
+             |                 L.
+             | hp_lnu~5 hp_lnu~5
+-------------+------------------
+hp_lnun_ex~5 |
+         --. |   1.0000
+         L1. |   0.9741   1.0000
+
+autocorrelation: (2)
+(obs=76)
+
+             |                 L.
+             | hp_lva~5 hp_lva~5
+-------------+------------------
+hp_lvacanc~5 |
+         --. |   1.0000
+         L1. |   0.9901   1.0000
+
+autocorrelation: (3)
+(obs=76)
+
+             |                 L.
+             | hp_lti.. hp_lti..
+-------------+------------------
+hp_lti~v_ext |
+         --. |   1.0000
+         L1. |   0.9417   1.0000
+
+autocorrelation: (4)
+(obs=76)
+
+             |                 L.
+             | hp_lti.. hp_lti..
+-------------+------------------
+hp_lti~t_sm5 |
+         --. |   1.0000
+         L1. |   0.9876   1.0000
+
+autocorrelation: (5)
+(obs=56)
+
+             |                 L.
+             | hp_q3~ep hp_q3~ep
+-------------+------------------
+  hp_q3_lsep |
+         --. |   1.0000
+         L1. |   0.9394   1.0000
+
+autocorrelation: (6): output per worker over the entire sample
+(obs=119)
+
+             |                 L.
+             | hp_lou~w hp_lou~w
+-------------+------------------
+   hp_loutpw |
+         --. |   1.0000
+         L1. |   0.7526   1.0000
+

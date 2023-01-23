@@ -1,0 +1,43 @@
+          reallocation cost c:    7.603850842
+               vacancy cost k:  124.834877014
+           unemp flow benefit:    0.829931319
+                          eta:    0.239473388
+                  delta_lowhc:    0.003467014
+                 delta_highhc:    0.000239031
+                 z_correction:    0.353747696
+                        rho_p:    0.998521090
+                      sigma_p:    0.002006004
+                        rho_z:    0.998306632
+                      sigma_z:    0.007161753
+                  x2 hc level:    1.170680881
+                  x3 hc level:    1.458026648
+           skill depreciation:    0.003162245
+              superocc1_level:    1.018486381
+    (implied) superocc2_level:    0.987687890
+              superocc3_level:    1.003484368
+              superocc4_level:    0.987552166
+          superocc1_elas_aggA:    1.081438422
+    (implied) superocc2_level:    1.119973973
+              superocc3_level:    0.531798303
+              superocc4_level:    1.282907009
+          superocc1_exoinflow:    0.620335817
+          superocc2_exoinflow:    0.765416875
+          superocc3_exoinflow:    0.852602035
+   (impl.)superocc4_exoinflow:    1.000000000
+       x-superocc search elas:    0.035890318
+      superocc1_1_transmatrix:    0.435950160
+      superocc1_2_transmatrix:    0.560263758
+      superocc1_3_transmatrix:    0.003785524
+(impl)superocc1_4_transmatrix:    0.000000558
+      superocc2_1_transmatrix:    0.406840602
+      superocc2_2_transmatrix:    0.383136719
+      superocc2_3_transmatrix:    0.210022679
+(impl)superocc2_4_transmatrix:    0.000000000
+      superocc3_1_transmatrix:    0.000061652
+      superocc3_2_transmatrix:    0.092821575
+      superocc3_3_transmatrix:    0.383483410
+(impl)superocc3_4_transmatrix:    0.523633363
+      superocc4_1_transmatrix:    0.000090648
+      superocc4_2_transmatrix:    0.139706404
+      superocc4_3_transmatrix:    0.766681755
+(impl)superocc4_4_transmatrix:    0.093521193

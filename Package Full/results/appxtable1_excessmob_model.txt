@@ -1,0 +1,48 @@
+  
+  
+ ~~~~ INCOMPL U DURATION DISTRIBUTION FROM SIPP, ALL (MODEL -- DATA)
+           < 3months 0.42-- 0.43
+           < 5months 0.64-- 0.67
+          5-9 months 0.21-- 0.20
+         9-13months  0.09-- 0.08
+        13-18months  0.06-- 0.05
+ ~~~~ INCOMPL U DISTRIBUTION: **YNG VS PRM** (MODEL -- DATA)
+  prop 1-2m;    yng: 0.52-- 0.47               prm:  0.39-- 0.41
+  prop 1-4m;    yng: 0.75-- 0.71               prm:  0.61-- 0.65
+  prop 5-8m;    yng: 0.17-- 0.19               prm:  0.22-- 0.21
+  prop 9-12m;   yng: 0.05-- 0.07               prm:  0.10-- 0.09
+  prop >=13m;   yng: 0.03-- 0.03               prm:  0.07-- 0.05
+  
+  
+  - HP-FILT. SEMI-ELASTICITY OF DURATION DIST TO UNEMPLOYMENT RATE-
+ prop u<3m  : -0.169256778229378      -- -0.166999995708466     
+ prop u<5m  : -0.184154585690446      -- -0.184000000357628     
+ prop u5-9  :  7.129159032317010E-002 --  7.599999755620956E-002
+ prop u9-13 :  6.276569450509829E-002 --  7.199999690055847E-002
+ prop u13-8 :  5.009730086217750E-002 --  4.300000146031380E-002
+   -note: NaN could occur if empty quarterly obs at high duration in simulation,
+  
+               increase nsim_gen in mod_global_ctv.f90                          
+      
+  
+  
+  - (LIN. DETRENDED, NO HPF) ELASTICITY DURATION DIST TO UNEMPLOYMENT RATE-
+ prop u<3m  : -0.448964364935833      -- -0.463999986648560     
+ prop u<5m  : -0.330434068971380      -- -0.363000005483627     
+ prop u5-9m :  0.346411125373292      --  0.319999992847443     
+ prop u9-13m:   1.00017372252563      --  0.864000022411346     
+ prop >13m  :   1.74234216342604      --   1.37500000000000     
+   -note: NaN could occur if empty quarterly obs at high duration in simulation,
+  
+               increase nsim_gen in mod_global_ctv.f90                          
+      
+  
+  SEMI ELAST AVE U DURATION OF MOVERS/STAYERS WITH U.RATE (LIN DETRENDED)
+                 MEASURE1-18mth sp-- data 1-18,,all spells ,  data all
+            OCC MOVERS :     2.327--     2.041
+            OCC STAYERS:     1.225--     1.657
+  
+  
+  SEMI ELAST AVE U DURATION OF MOVERS/STAYERS WITH U.RATE (HP FILTERED)
+            OCC MOVERS :     2.993--     3.152
+            OCC STAYERS:     1.496--     2.544

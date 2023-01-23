@@ -1,0 +1,21 @@
+
+--------------------------------------------------------
+Unemployment Durations of Movers vs Stayers across Cycle
+--------------------------------------------------------
+
+
+---------------------------------------------
+                  |          lne_c_mmo       
+                  |  Stayers   Movers   Total
+------------------+--------------------------
+rec_exp_ind3      |                          
+  Times of High U |    4.596    5.491   5.067
+  Neither         |    4.244    4.982   4.626
+  Times of Low U  |    3.180    3.572   3.391
+  Total           |    4.104    4.795   4.468
+---------------------------------------------
+
+note: here we use unrestricted durations, but require that
+workers has more than 20 months in sample at moment of 
+finding a job. In calibration model *and* data we focus on
+spells between 1 and 18 months
