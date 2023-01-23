@@ -1,0 +1,156 @@
+dictionary using sipp92t3.dat  { 
+*This program reads the 1992 SIPP Wave 3 Topical Module Data File
+*Note:  This program is distributed under the GNU GPL. See end of
+*this file and http://www.gnu.org/licenses/ for details.
+*by Jean Roth Mon Jun  7 18:28:30 EDT 2004
+*Please report errors to jroth@nber.org
+*run with do sip92t3
+*Change output file name/location as desired in the first line of the .dct file
+*If you are using a PC, you may need to change the direction of the slashes, as in C:\
+*  or "\\Nber\home\data\sipp\1992\sip92t3.dat"
+* The following changes in variable names have been made, if necessary:
+*      '$' to 'd';            '-' to '_';              '%' to 'p';
+* Note:  Variable names in Stata are case-sensitive
+
+_column(1   )   str5 suseqnum    %5s "Sequence number of sample unit"        
+_column(6   )   str9 id          %9s "Sample unit identifier"                
+_column(15  )   byte rotation    %1f "Rotation"                              
+_column(16  )   byte state       %2f "Fips state code from the MST/GRIN file"
+_column(18  )   byte pinx        %2f "Person index from core"                
+_column(20  )   str2 addid       %2s "Address ID - This field"               
+_column(22  )   byte item36b     %2f "Control card item 36B - interview"     
+_column(24  )   byte intvw       %1f "Person's interview status"             
+_column(25  )   long pp_mis      %5f "Monthly person's interview status"     
+_column(30  )   str2 entry       %2s "Edited entry address ID"               
+_column(32  )   str3 pnum        %3s "Edited person number"                  
+_column(35  ) double finalwgt %12.4f "'STAGE1WT' second stage factor"        
+_column(47  )   byte rrp         %1f "Edited relationship to reference perso"
+_column(48  )    int age         %3f "Edited and imputed age as of last"     
+_column(51  )   byte sex         %1f "Sex of this person"                    
+_column(52  )   byte race        %1f "Race of this person"                   
+_column(53  )   byte ms          %1f "Marital status"                        
+_column(54  )    int pnsp        %3f "Person number of spouse"               
+_column(57  )    int pnpt        %3f "Person number of parent"               
+_column(60  )   byte higrade     %2f "What is the highest grade or year of"  
+_column(62  )   byte grd_cmpl    %1f "Did he/she complete that grade"        
+_column(63  )   byte ethnicty    %2f "Ethnic origin"                         
+_column(65  )   byte wave        %1f "Wave within Panel year"                
+_column(66  )   str2 tmentry     %2s "Respondent's entry address ID"         
+_column(68  )   str3 tmhhpnum    %3s "Person number"                         
+_column(73  )   byte tm8000      %1f "Check item T1"                         
+_column(74  )   byte tm8002      %2f "Washing machine"                       
+_column(76  )   byte tm8006      %2f "Clothes dryer"                         
+_column(78  )   byte tm8010      %2f "Dishwasher"                            
+_column(80  )   byte tm8014      %2f "Refrigerator"                          
+_column(82  )   byte tm8018      %2f "Food freezer (separate from"           
+_column(84  )   byte tm8022      %2f "Color television"                      
+_column(86  )   byte tm8026      %2f "Gas or electric stove (with or"        
+_column(88  )   byte tm8030      %2f "Microwave oven"                        
+_column(90  )   byte tm8034      %2f "Videocassette recorder (VCR)"          
+_column(92  )   byte tm8038      %2f "Air conditioner (central or room)"     
+_column(94  )   byte tm8042      %2f "Personal computer"                     
+_column(96  )   byte tm8046      %2f "Telephone"                             
+_column(98  )   byte tm8100      %2f "How many rooms are there in your home?"
+_column(100 )   byte tm8102      %2f "Leaking roof or ceiling?"              
+_column(102 )   byte tm8106      %2f "A toilet, hot water heater, or other"  
+_column(104 )   byte tm8110      %2f "Broken windows?"                       
+_column(106 )   byte tm8114      %2f "Exposed electrical wires?"             
+_column(108 )   byte tm8118      %2f "Rats, mice, roaches, or other insects?"
+_column(110 )   byte tm8122      %2f "Holes in the floor (large enough to"   
+_column(112 )   byte tm8126      %2f "Open cracks or holes in the walls"     
+_column(114 )   byte tm8130      %2f "The general state of repair of your ho"
+_column(116 )   byte tm8132      %2f "The amount of room or space your home" 
+_column(118 )   byte tm8134      %2f "The furnishings in your home?"         
+_column(120 )   byte tm8136      %2f "The warmth of your home in winter?"    
+_column(122 )   byte tm8138      %2f "The coolness of your home in summer?"  
+_column(124 )   byte tm8140      %2f "The amount of privacy your home offers"
+_column(126 )   byte tm8142      %2f "The security or safety of your home?"  
+_column(128 )   byte tm8144      %2f "The convenience of your home to stores"
+_column(130 )   byte tm8146      %2f "Your relationship with neighbors?"     
+_column(132 )   byte tm8148      %2f "Do you feel that the conditions in thi"
+_column(134 )   byte tm8150      %2f "On a scale of 1 to 10, how would you"  
+_column(136 )   byte tm8152      %2f "On a scale of 1 to 10, how would you"  
+_column(138 )   byte tm8154      %2f "In the past month, have there been any"
+_column(140 )   byte tm8156      %1f "When you go out, do you ever carry"    
+_column(141 )   byte tm8158      %2f "Do you consider your neighborhood"     
+_column(143 )   byte tm8160      %2f "How about your home? Do you consider i"
+_column(145 )   byte tm8162      %2f "We are interested in finding out if"   
+_column(147 )   byte tm8170      %2f "Street noise or heavy street traffic?" 
+_column(149 )   byte tm8172      %2f "Streets in need of repair?"            
+_column(151 )   byte tm8174      %2f "Crime?"                                
+_column(153 )   byte tm8176      %2f "Trash, litter, or garbage in the"      
+_column(155 )   byte tm8178      %2f "Rundown or abandoned houses or buildin"
+_column(157 )   byte tm8180      %2f "Industries, businesses, or other"      
+_column(159 )   byte tm8182      %2f "Odors, smoke, or gas fumes?"           
+_column(161 )   byte tm8184      %2f "Do you feel that neighborhood conditio"
+_column(163 )   byte tm8186      %2f "Hospitals, health clinics, and doctors"
+_column(165 )   byte tm8188      %2f "Parks and recreational facilities?"    
+_column(167 )   byte tm8190      %2f "Public transportation?"                
+_column(169 )   byte tm8192      %2f "Police services?"                      
+_column(171 )   byte tm8194      %2f "Fire department services"              
+_column(173 )   byte tm8196      %2f "Neighborhood stores?"                  
+_column(175 )   byte tm8198      %2f "Quality of education in local"         
+_column(177 )   byte tm8200      %2f "Safety in local schools?"              
+_column(179 )   byte tm8202      %2f "Education or training opportunities"   
+_column(181 )   byte tm8204      %2f "Do you feel that the services in your" 
+_column(183 )   byte tm8300      %2f "During the past 12 months, has there b"
+_column(185 )   byte tm8302      %2f "Did not pay the full amount of the"    
+_column(187 )   byte tm8304      %1f "Did any person or organization help?"  
+_column(188 )   byte tm8306      %2f "Who helped?"                           
+_column(190 )   byte tm8308      %2f "Was evicted from your home/apartment"  
+_column(192 )   byte tm8310      %1f "Did any person or organization help?"  
+_column(193 )   byte tm8312      %2f "Who helped?"                           
+_column(195 )   byte tm8314      %2f "Did not pay the full amount of the"    
+_column(197 )   byte tm8316      %1f "Did any person or organization help?"  
+_column(198 )   byte tm8318      %2f "Who helped?"                           
+_column(200 )   byte tm8320      %2f "Had service turned off by the gas"     
+_column(202 )   byte tm8322      %1f "Did any person or organization help?"  
+_column(203 )   byte tm8324      %2f "Who helped?"                           
+_column(205 )   byte tm8326      %2f "Had service disconnected by the"       
+_column(207 )   byte tm8328      %1f "Did any person or organization help?"  
+_column(208 )   byte tm8330      %2f "Who helped?"                           
+_column(210 )   byte tm8332      %2f "Had someone in your household who"     
+_column(212 )   byte tm8334      %1f "Did any person or organization help?"  
+_column(213 )   byte tm8336      %2f "Who helped?"                           
+_column(215 )   byte tm8338      %2f "Had someone who needed to see a"       
+_column(217 )   byte tm8340      %1f "Did any person or organization help?"  
+_column(218 )   byte tm8342      %2f "Who helped?"                           
+_column(220 )   byte tm8344      %2f "If your household had a problem with"  
+_column(222 )   byte tm8346      %2f "If your household had a problem with"  
+_column(224 )   byte tm8348      %2f "If your household had a problem with"  
+_column(226 )   byte tm8350      %2f "Which of these statements best describ"
+_column(228 )   byte tm8352      %1f "Last month"                            
+_column(229 )   byte tm8354      %1f "Two months ago"                        
+_column(230 )   byte tm8356      %1f "Three months ago"                      
+_column(231 )   byte tm8358      %1f "Four months ago"                       
+_column(232 )   byte tm8360      %2f "Did not have enough money, food"       
+_column(234 )   byte tm8362      %2f "Did not have working appliances for"   
+_column(236 )   byte tm8364      %2f "Did not have transportation"           
+_column(238 )   byte tm8366      %2f "Some other reason"                     
+_column(240 )   byte tm8368      %2f "Thinking about the past month, how man"
+_column(242 )   long tm8370      %6f "Short on its food budget last month?"  
+
+}
+/*
+Copyright 2004 shared by the National Bureau of Economic Research and Jean Roth
+
+National Bureau of Economic Research.
+1050 Massachusetts Avenue
+Cambridge, MA 02138
+jroth@nber.org
+
+This program and all programs referenced in it are free software. You
+can redistribute the program or modify it under the terms of the GNU
+General Public License as published by the Free Software Foundation;
+either version 2 of the License, or (at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with this program; if not, write to the Free Software
+Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307
+USA.
+*/

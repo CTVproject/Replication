@@ -1,0 +1,28 @@
+  
+ FOOTNOTE 22 SEPARATION cond. on move/stayer previous u spell (MODEL--DATA)
+  ave mthly sep after move:   0.0263  --    0.0240
+  ave mthly sep after stay:   0.0366  --    0.0264
+ 
+ STRONGER RELATIVE RESPONSE TO SEPARATIONS OF PRIME TO YOUNG, MODEL
+    (elasticity hp-filtered sep with hp-filtered productivity) 
+ sep young:  -9.05777175958093     
+ sep prime:  -13.3095125417256     
+ 
+ SLIGHTLY STRONGER REL. RESPONSE U RATE OF PRIME TO YOUNG, MODEL
+    (elasticity hp-filtered u with hp-filtered productivity) 
+ unempl young:  -18.3092300871769     
+ unempl prime:  -23.7493362656241     
+ 
+ mM ratio in the model
+min-Mean, all wages:                          1.5756
+min-Mean, controlling for age:                1.5287
+min-Mean, controlling for age and cycle:      1.4595
+1st ptile-Mean, all wages:                    1.4805
+1st ptile-Mean, controlling for age:          1.4327
+1st ptile-Mean, controlling for age and       1.4182
+ Preferred measure: min-Mean, controls age, cycle
+ 
+ model generates that u is more concentrated for prime-aged
+    ~~~~u prop window ~~~~    0.1415  --    0.1222
+    ~~~~uprop window yng ~    0.1906   --   0.1861
+    ~~~~uprop window prm ~    0.1259  --    0.1115

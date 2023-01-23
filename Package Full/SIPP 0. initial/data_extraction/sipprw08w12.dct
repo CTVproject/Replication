@@ -1,0 +1,166 @@
+infile dictionary { 
+*This program reads the 2008 SIPP Wave 12 Topical Module Research Data File
+*by Jean Roth Wed Jan  7 14:51:31 EST 2015
+
+*Please report errors to jroth@nber.org
+*See the .do file for directions and run with do sipprw08w12
+*NOTE:  This program is distributed under the GNU GPL. 
+*See end of this file and http://www.gnu.org/licenses/ for details.
+*by Jean Roth Wed Jan  7 14:51:31 EST 2015
+*Please report errors to jroth@nber.org
+*run with do sipprw08w12
+*Change output file name/location as desired in the first line of the .dct file
+*If you are using a PC, you may need to change the direction of the slashes, as in C:\
+*  or "\\Nber\home\data\sipp\2008\sipprw08w12.dat"
+* The following changes in variable names have been made, if necessary:
+*      '$' to 'd';            '-' to '_';              '%' to 'p';
+* Note:  Variable names in Stata are case-sensitive
+
+_column(1   )  str12 ssuid      %12s "SU: Sample Unit Identifier"            
+_column(13  )    int spanel      %4f "SU: Sample Code - Indicates Panel Year"
+_column(17  )   byte swave       %2f "SU: Wave of data collection"           
+_column(19  )   byte srefmon     %1f "SU: Reference month of this record"    
+_column(20  )   str4 epppnum     %4s "PE: Person number"                     
+_column(24  ) double repwgt1  %10.4f "WW: Person replicate weight 1"         
+_column(34  ) double repwgt2  %10.4f "WW: Person replicate weight 2"         
+_column(44  ) double repwgt3  %10.4f "WW: Person replicate weight 3"         
+_column(54  ) double repwgt4  %10.4f "WW: Person replicate weight 4"         
+_column(64  ) double repwgt5  %10.4f "WW: Person replicate weight 5"         
+_column(74  ) double repwgt6  %10.4f "WW: Person replicate weight 6"         
+_column(84  ) double repwgt7  %10.4f "WW: Person replicate weight 7"         
+_column(94  ) double repwgt8  %10.4f "WW: Person replicate weight 8"         
+_column(104 ) double repwgt9  %10.4f "WW: Person replicate weight 9"         
+_column(114 ) double repwgt10 %10.4f "WW: Person replicate weight 10"        
+_column(124 ) double repwgt11 %10.4f "WW: Person replicate weight 11"        
+_column(134 ) double repwgt12 %10.4f "WW: Person replicate weight 12"        
+_column(144 ) double repwgt13 %10.4f "WW: Person replicate weight 13"        
+_column(154 ) double repwgt14 %10.4f "WW: Person replicate weight 14"        
+_column(164 ) double repwgt15 %10.4f "WW: Person replicate weight 15"        
+_column(174 ) double repwgt16 %10.4f "WW: Person replicate weight 16"        
+_column(184 ) double repwgt17 %10.4f "WW: Person replicate weight 17"        
+_column(194 ) double repwgt18 %10.4f "WW: Person replicate weight 18"        
+_column(204 ) double repwgt19 %10.4f "WW: Person replicate weight 19"        
+_column(214 ) double repwgt20 %10.4f "WW: Person replicate weight 20"        
+_column(224 ) double repwgt21 %10.4f "WW: Person replicate weight 21"        
+_column(234 ) double repwgt22 %10.4f "WW: Person replicate weight 22"        
+_column(244 ) double repwgt23 %10.4f "WW: Person replicate weight 23"        
+_column(254 ) double repwgt24 %10.4f "WW: Person replicate weight 24"        
+_column(264 ) double repwgt25 %10.4f "WW: Person replicate weight 25"        
+_column(274 ) double repwgt26 %10.4f "WW: Person replicate weight 26"        
+_column(284 ) double repwgt27 %10.4f "WW: Person replicate weight 27"        
+_column(294 ) double repwgt28 %10.4f "WW: Person replicate weight 28"        
+_column(304 ) double repwgt29 %10.4f "WW: Person replicate weight 29"        
+_column(314 ) double repwgt30 %10.4f "WW: Person replicate weight 30"        
+_column(324 ) double repwgt31 %10.4f "WW: Person replicate weight 31"        
+_column(334 ) double repwgt32 %10.4f "WW: Person replicate weight 32"        
+_column(344 ) double repwgt33 %10.4f "WW: Person replicate weight 33"        
+_column(354 ) double repwgt34 %10.4f "WW: Person replicate weight 34"        
+_column(364 ) double repwgt35 %10.4f "WW: Person replicate weight 35"        
+_column(374 ) double repwgt36 %10.4f "WW: Person replicate weight 36"        
+_column(384 ) double repwgt37 %10.4f "WW: Person replicate weight 37"        
+_column(394 ) double repwgt38 %10.4f "WW: Person replicate weight 38"        
+_column(404 ) double repwgt39 %10.4f "WW: Person replicate weight 39"        
+_column(414 ) double repwgt40 %10.4f "WW: Person replicate weight 40"        
+_column(424 ) double repwgt41 %10.4f "WW: Person replicate weight 41"        
+_column(434 ) double repwgt42 %10.4f "WW: Person replicate weight 42"        
+_column(444 ) double repwgt43 %10.4f "WW: Person replicate weight 43"        
+_column(454 ) double repwgt44 %10.4f "WW: Person replicate weight 44"        
+_column(464 ) double repwgt45 %10.4f "WW: Person replicate weight 45"        
+_column(474 ) double repwgt46 %10.4f "WW: Person replicate weight 46"        
+_column(484 ) double repwgt47 %10.4f "WW: Person replicate weight 47"        
+_column(494 ) double repwgt48 %10.4f "WW: Person replicate weight 48"        
+_column(504 ) double repwgt49 %10.4f "WW: Person replicate weight 49"        
+_column(514 ) double repwgt50 %10.4f "WW: Person replicate weight 50"        
+_column(524 ) double repwgt51 %10.4f "WW: Person replicate weight 51"        
+_column(534 ) double repwgt52 %10.4f "WW: Person replicate weight 52"        
+_column(544 ) double repwgt53 %10.4f "WW: Person replicate weight 53"        
+_column(554 ) double repwgt54 %10.4f "WW: Person replicate weight 54"        
+_column(564 ) double repwgt55 %10.4f "WW: Person replicate weight 55"        
+_column(574 ) double repwgt56 %10.4f "WW: Person replicate weight 56"        
+_column(584 ) double repwgt57 %10.4f "WW: Person replicate weight 57"        
+_column(594 ) double repwgt58 %10.4f "WW: Person replicate weight 58"        
+_column(604 ) double repwgt59 %10.4f "WW: Person replicate weight 59"        
+_column(614 ) double repwgt60 %10.4f "WW: Person replicate weight 60"        
+_column(624 ) double repwgt61 %10.4f "WW: Person replicate weight 61"        
+_column(634 ) double repwgt62 %10.4f "WW: Person replicate weight 62"        
+_column(644 ) double repwgt63 %10.4f "WW: Person replicate weight 63"        
+_column(654 ) double repwgt64 %10.4f "WW: Person replicate weight 64"        
+_column(664 ) double repwgt65 %10.4f "WW: Person replicate weight 65"        
+_column(674 ) double repwgt66 %10.4f "WW: Person replicate weight 66"        
+_column(684 ) double repwgt67 %10.4f "WW: Person replicate weight 67"        
+_column(694 ) double repwgt68 %10.4f "WW: Person replicate weight 68"        
+_column(704 ) double repwgt69 %10.4f "WW: Person replicate weight 69"        
+_column(714 ) double repwgt70 %10.4f "WW: Person replicate weight 70"        
+_column(724 ) double repwgt71 %10.4f "WW: Person replicate weight 71"        
+_column(734 ) double repwgt72 %10.4f "WW: Person replicate weight 72"        
+_column(744 ) double repwgt73 %10.4f "WW: Person replicate weight 73"        
+_column(754 ) double repwgt74 %10.4f "WW: Person replicate weight 74"        
+_column(764 ) double repwgt75 %10.4f "WW: Person replicate weight 75"        
+_column(774 ) double repwgt76 %10.4f "WW: Person replicate weight 76"        
+_column(784 ) double repwgt77 %10.4f "WW: Person replicate weight 77"        
+_column(794 ) double repwgt78 %10.4f "WW: Person replicate weight 78"        
+_column(804 ) double repwgt79 %10.4f "WW: Person replicate weight 79"        
+_column(814 ) double repwgt80 %10.4f "WW: Person replicate weight 80"        
+_column(824 ) double repwgt81 %10.4f "WW: Person replicate weight 81"        
+_column(834 ) double repwgt82 %10.4f "WW: Person replicate weight 82"        
+_column(844 ) double repwgt83 %10.4f "WW: Person replicate weight 83"        
+_column(854 ) double repwgt84 %10.4f "WW: Person replicate weight 84"        
+_column(864 ) double repwgt85 %10.4f "WW: Person replicate weight 85"        
+_column(874 ) double repwgt86 %10.4f "WW: Person replicate weight 86"        
+_column(884 ) double repwgt87 %10.4f "WW: Person replicate weight 87"        
+_column(894 ) double repwgt88 %10.4f "WW: Person replicate weight 88"        
+_column(904 ) double repwgt89 %10.4f "WW: Person replicate weight 89"        
+_column(914 ) double repwgt90 %10.4f "WW: Person replicate weight 90"        
+_column(924 ) double repwgt91 %10.4f "WW: Person replicate weight 91"        
+_column(934 ) double repwgt92 %10.4f "WW: Person replicate weight 92"        
+_column(944 ) double repwgt93 %10.4f "WW: Person replicate weight 93"        
+_column(954 ) double repwgt94 %10.4f "WW: Person replicate weight 94"        
+_column(964 ) double repwgt95 %10.4f "WW: Person replicate weight 95"        
+_column(974 ) double repwgt96 %10.4f "WW: Person replicate weight 96"        
+_column(984 ) double repwgt97 %10.4f "WW: Person replicate weight 97"        
+_column(994 ) double repwgt98 %10.4f "WW: Person replicate weight 98"        
+_column(1004) double repwgt99 %10.4f "WW: Person replicate weight 99"        
+_column(1014) double repwgt100 %10.4f "WW: Person replicate weight 100"       
+_column(1024) double repwgt101 %10.4f "WW: Person replicate weight 101"       
+_column(1034) double repwgt102 %10.4f "WW: Person replicate weight 102"       
+_column(1044) double repwgt103 %10.4f "WW: Person replicate weight 103"       
+_column(1054) double repwgt104 %10.4f "WW: Person replicate weight 104"       
+_column(1064) double repwgt105 %10.4f "WW: Person replicate weight 105"       
+_column(1074) double repwgt106 %10.4f "WW: Person replicate weight 106"       
+_column(1084) double repwgt107 %10.4f "WW: Person replicate weight 107"       
+_column(1094) double repwgt108 %10.4f "WW: Person replicate weight 108"       
+_column(1104) double repwgt109 %10.4f "WW: Person replicate weight 109"       
+_column(1114) double repwgt110 %10.4f "WW: Person replicate weight 110"       
+_column(1124) double repwgt111 %10.4f "WW: Person replicate weight 111"       
+_column(1134) double repwgt112 %10.4f "WW: Person replicate weight 112"       
+_column(1144) double repwgt113 %10.4f "WW: Person replicate weight 113"       
+_column(1154) double repwgt114 %10.4f "WW: Person replicate weight 114"       
+_column(1164) double repwgt115 %10.4f "WW: Person replicate weight 115"       
+_column(1174) double repwgt116 %10.4f "WW: Person replicate weight 116"       
+_column(1184) double repwgt117 %10.4f "WW: Person replicate weight 117"       
+_column(1194) double repwgt118 %10.4f "WW: Person replicate weight 118"       
+_column(1204) double repwgt119 %10.4f "WW: Person replicate weight 119"       
+_column(1214) double repwgt120 %10.4f "WW: Person replicate weight 120"       
+
+}
+
+** Copyright 2015 shared by the National Bureau of Economic Research and Jean Roth ;
+
+** National Bureau of Economic Research. ;
+** 1050 Massachusetts Avenue ;
+** Cambridge, MA 02138 ;
+** jroth@nber.org ;
+
+** This program and all programs referenced in it are free software. You ;
+** can redistribute the program or modify it under the terms of the GNU ;
+** General Public License as published by the Free Software Foundation; 
+** either version 2 of the License, or (at your option) any later version. ;
+
+** This program is distributed in the hope that it will be useful, ;
+** but WITHOUT ANY WARRANTY, without even the implied warranty of ;
+** MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the ;
+** GNU General Public License for more details. ;
+
+** You should have received a copy of the GNU General Public License ;
+** along with this program, if not, write to the Free Software ;
+** Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307 USA. ;

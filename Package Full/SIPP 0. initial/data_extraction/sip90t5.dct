@@ -1,0 +1,114 @@
+infile dictionary  {
+*This program reads the 1990 SIPP Wave 5 Topical Module Data File
+*Note:  This program is distributed under the GNU GPL. See end of
+*this file and http://www.gnu.org/licenses/ for details.
+*by Jean Roth Mon Jun  7 17:36:42 EDT 2004
+*Please report errors to jroth@nber.org
+*run with do sip90t5
+*Change output file name/location as desired in the first line of the .dct file
+*If you are using a PC, you may need to change the direction of the slashes, as in C:\
+*  or "\\Nber\home\data\sipp\1990\sip90t5.dat"
+* The following changes in variable names have been made, if necessary:
+*      '$' to 'd';            '-' to '_';              '%' to 'p';
+* Note:  Variable names in Stata are case-sensitive
+
+_column(1   )   str5 suseqnum    %5s "Sequence number of sample unit"        
+_column(6   )   str9 id          %9s "Sample unit identifier"                
+_column(15  )   byte rotation    %1f "Rotation"                              
+_column(16  )   byte state       %2f "FIPS state code from the MST/GRIN file"
+_column(18  )   byte pinx        %2f "Person index from core"                
+_column(20  )   str2 addid       %2s "Address ID - This field differentiates"
+_column(22  )   byte item36b     %2f "Control card item 36B -"               
+_column(24  )   byte intvw       %1f "Person's interview status"             
+_column(25  )   str2 entry       %2s "Edited entry address ID"               
+_column(27  )   str3 pnum        %3s "Edited person number"                  
+_column(30  ) double finalwgt %12.4f "'STAGE1WT' second stage factor."       
+_column(42  )   byte rrp         %1f "Edited relationship to reference perso"
+_column(43  )    int age         %3f "Edited and imputed age as of last"     
+_column(46  )   byte sex         %1f "Sex of this person"                    
+_column(47  )   byte race        %1f "Race of this person"                   
+_column(48  )   byte ms          %1f "Marital status"                        
+_column(49  )    int pnsp        %3f "Person number of spouse"               
+_column(52  )    int pnpt        %3f "Prson number of parent"                
+_column(55  )   byte higrade     %2f "What is the highest grade or year of"  
+_column(57  )   byte grd_cmpl    %1f "Did he/she complete that grade"        
+_column(58  )   byte ethnicty    %2f "Ethnic origin"                         
+_column(60  )   byte wave        %1f "Wave number within Panel"              
+_column(61  )   byte tm9610      %1f "Was ... enrolled in school anytime"    
+_column(62  )   byte tm9612      %2f "At what level or grade was..."         
+_column(64  )   byte tm9614      %1f "Check item T37"                        
+_column(65  )   byte tm9616      %1f "Was...enrolled in a public school?"    
+_column(66  )   long tm9618      %5f "During the past year what was the"     
+_column(71  )    int tm9620      %4f "What was the total cost of...'s"       
+_column(75  )   byte tm9622      %1f "Did...live away from home while"       
+_column(76  )   long tm9624      %5f "What was the total cost for room and"  
+_column(81  )   byte tm9626      %2f "Any type of educational assistance"    
+_column(83  )   byte tm9628      %1f "The GI bill?"                          
+_column(84  )    int tm9630      %4f "Amount received from GI bill"          
+_column(88  )   byte tm9632      %1f "Other veteran's educational assis-"    
+_column(89  )   long tm9634      %5f "Amount received from veteran's"        
+_column(94  )   byte tm9636      %1f "College work study program?"           
+_column(95  )    int tm9638      %4f "Amount received from college work"     
+_column(99  )   byte tm9640      %1f "A Pell grant?"                         
+_column(100 )    int tm9642      %4f "Amount received from Pell grant"       
+_column(104 )   byte tm9644      %1f "A Supplemental Educational"            
+_column(105 )    int tm9646      %4f "Amount received from SEOG"             
+_column(109 )   byte tm9648      %1f "A national direct student loan?"       
+_column(110 )    int tm9650      %4f "Amount received from a national"       
+_column(114 )   byte tm9652      %1f "A guaranteed student loan"             
+_column(115 )   long tm9654      %5f "Amount received from a guaranteed"     
+_column(120 )   byte tm9656      %1f "A JTPA training program"               
+_column(121 )    int tm9658      %4f "Amount received from JTPA"             
+_column(125 )   byte tm9660      %1f "Employer assistance"                   
+_column(126 )   long tm9662      %5f "Amount of employer assistance"         
+_column(131 )   byte tm9664      %1f "A fellowship or scholarship?"          
+_column(132 )   long tm9666      %5f "Amount of fellowship or scholarship"   
+_column(137 )   byte tm9668      %1f "A tuition reduction?"                  
+_column(138 )    int tm9670      %4f "Amount received from tuition"          
+_column(142 )   byte tm9672      %1f "Anything else (other than assistance"  
+_column(143 )   long tm9674      %5f "Amount of educational assistance"      
+_column(148 )   byte tmetcnt     %2f "Number of items with data on"          
+_column(150 )   byte tm_ifc1     %1f "Part C imputation flag #01"            
+_column(151 )   byte tm_ifc2     %1f "Part C imputation flag #02"            
+_column(152 )   byte tm_ifc3     %1f "Part C imputation flag #03"            
+_column(153 )   byte tm_ifc4     %1f "Part C imputation flag #04"            
+_column(154 )   byte tm_ifc5     %1f "Part C imputation flag #05"            
+_column(155 )   byte tm_ifc6     %1f "Part C imputation flag #06"            
+_column(156 )   byte tm_ifc7     %1f "Part C imputation flag #07"            
+_column(157 )   byte tm_ifc8     %1f "Part C imputation flag #08"            
+_column(158 )   byte tm_ifc9     %1f "Part C imputation flag #09"            
+_column(159 )   byte tm_ifc10    %1f "Part C imputation flag #10"            
+_column(160 )   byte tm_ifc11    %1f "Part C imputation flag #11"            
+_column(161 )   byte tm_ifc12    %1f "Part C imputation flag #12"            
+_column(162 )   byte tm_ifc13    %1f "Part C imputation flag #13"            
+_column(163 )   byte tm_ifc14    %1f "Part C imputation flag #14"            
+_column(164 )   byte tm_ifc15    %1f "Part C imputation flag #15"            
+_column(165 )   byte tm_ifc16    %1f "Part C imputation flag #16"            
+_column(166 )   byte tm_ifc17    %1f "Part C imputation flag #17"            
+_column(167 )   byte tm_ifc18    %1f "Part C imputation flag #18"            
+_column(168 )    int tmtedfin    %4f "Total amount of educational assistance"
+
+}
+/*
+Copyright 2004 shared by the National Bureau of Economic Research and Jean Roth
+
+National Bureau of Economic Research.
+1050 Massachusetts Avenue
+Cambridge, MA 02138
+jroth@nber.org
+
+This program and all programs referenced in it are free software. You
+can redistribute the program or modify it under the terms of the GNU
+General Public License as published by the Free Software Foundation;
+either version 2 of the License, or (at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with this program; if not, write to the Free Software
+Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307
+USA.
+*/

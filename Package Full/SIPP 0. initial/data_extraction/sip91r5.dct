@@ -1,0 +1,214 @@
+dictionary using sipp91r5.dat  { 
+*This program reads the 1991 SIPP Wave 5 Topical Module Research Data File
+*Note:  This program is distributed under the GNU GPL. See end of
+*this file and http://www.gnu.org/licenses/ for details.
+*by Jean Roth Mon Jun  7 18:29:19 EDT 2004
+*Please report errors to jroth@nber.org
+*run with do sip91r5
+*Change output file name/location as desired in the first line of the .dct file
+*If you are using a PC, you may need to change the direction of the slashes, as in C:\
+*  or "\\Nber\home\data\sipp\1991\sip91r5.dat"
+* The following changes in variable names have been made, if necessary:
+*      '$' to 'd';            '-' to '_';              '%' to 'p';
+* Note:  Variable names in Stata are case-sensitive
+
+_column(1   )   str5 suseqnum    %5s "Sequence number of sample unit"        
+_column(6   )   str9 id          %9s "Sample unit identifier"                
+_column(15  )   byte rotation    %1f "Rotation"                              
+_column(16  )   byte state       %2f "FIPS state code from the MST/GRIN file"
+_column(18  )   byte pinx        %2f "Person index from core"                
+_column(20  )   str2 addid       %2s "Address ID - This field differentiates"
+_column(22  )   byte item36b     %2f "Control card item 36B -"               
+_column(24  )   byte intvw       %1f "Person's interview status"             
+_column(25  )   byte pp_mis1     %1f "Person's monthly interview status"     
+_column(26  )   byte pp_mis2     %1f "Person's monthly interview status"     
+_column(27  )   byte pp_mis3     %1f "Person's monthly interview status"     
+_column(28  )   byte pp_mis4     %1f "Person's monthly interview status"     
+_column(29  )   byte pp_mis5     %1f "Person's monthly interview status"     
+_column(30  )   str2 entry       %2s "Edited entry address ID"               
+_column(32  )   str3 pnum        %3s "Edited person number"                  
+_column(35  ) double finalwgt %12.4f "'STAGE1WT' second stage factor."       
+_column(47  )   byte rrp         %1f "Edited relationship to reference perso"
+_column(48  )    int age         %3f "Edited and imputed age as of last"     
+_column(51  )   byte sex         %1f "Sex of this person"                    
+_column(52  )   byte race        %1f "Race of this person"                   
+_column(53  )   byte ms          %1f "Marital status"                        
+_column(54  )    int pnsp        %3f "Person number of spouse"               
+_column(57  )    int pnpt        %3f "Person number of parent"               
+_column(60  )   byte higrade     %2f "What is the highest grade or year of"  
+_column(62  )   byte grd_cmpl    %1f "Did he/she complete that grade"        
+_column(63  )   byte ethnicty    %2f "Ethnic origin"                         
+_column(65  )   byte wave        %1f "Wave number within Panel"              
+_column(69  )   byte tm8000      %1f "Check Item T1"                         
+_column(70  )   byte tm8002      %1f "Check Item T2"                         
+_column(71  )   byte tm8004      %1f "Did ... own and operate a business"    
+_column(72  )   byte tm8006      %2f "How many different businesses did"     
+_column(74  )    int tmind1      %3f "Three digit industry code for"         
+_column(77  )   byte tm8010      %2f "Check Item T3 for business"            
+_column(79  )   byte tm8012      %1f "Check Item T4 for business"            
+_column(80  )    int tm8014      %3f "Person number of other owner of"       
+_column(83  )   byte tm8016      %2f "Business ID number of business"        
+_column(85  )   byte tm8018      %2f "What was the form of this (business/"  
+_column(87  )   byte tm8020      %1f "Was this business primarily"           
+_column(88  )   byte tm8104      %1f "Check Item T5 for business"            
+_column(89  )   byte tm8106      %2f "Were any other members of this"        
+_column(91  )    int tm8108      %3f                                         
+_column(94  )    int tm8110      %3f                                         
+_column(97  )   byte tm8112      %1f "Was this (business/practice) owned"    
+_column(98  )   byte tm8114      %2f "What percentage of this (business/"    
+_column(100 )   byte tm8116      %2f "What percentage of this (business/"    
+_column(102 )   byte tm8126      %1f "Check Item T7 for business"            
+_column(103 )   byte tm8204      %2f "Indication of loss"                    
+_column(105 )   byte tm8208      %1f "Check Item T8 for business"            
+_column(106 )   byte tm8210      %2f "Apart from the net income already"     
+_column(108 )    int tm8212      %3f "Person number of first co-owner of"    
+_column(111 )   byte tm8216      %2f "Indication of loss for business"       
+_column(113 )    int tm8218      %3f "Person number of second co-owner of"   
+_column(116 )   byte tm8222      %2f "Indication of loss for business"       
+_column(118 )   byte tm8274      %1f "Check Item T9"                         
+_column(119 )    int tmind2      %3f "Three digit industry code for"         
+_column(122 )   byte tm8060      %2f "Check Item T3 for business"            
+_column(124 )   byte tm8062      %1f "Check Item T4 for business"            
+_column(125 )    int tm8064      %3f "Person number of other owner of"       
+_column(128 )   byte tm8066      %2f "ID number of business for other owner" 
+_column(130 )   byte tm8068      %2f "What was the form of this (business/"  
+_column(132 )   byte tm8070      %1f "Was this business primarily"           
+_column(133 )   byte tm8154      %1f "Check Item T5 for business"            
+_column(134 )   byte tm8156      %2f "Were any other members of this"        
+_column(136 )    int tm8158      %3f                                         
+_column(139 )    int tm8160      %3f                                         
+_column(142 )   byte tm8162      %1f "Was this (business/practice) owned"    
+_column(143 )   byte tm8164      %2f "What percentage of this (business/"    
+_column(145 )   byte tm8166      %2f "What percentage of this (business/"    
+_column(147 )   byte tm8176      %1f "Check Item T7 for business one"        
+_column(148 )   byte tm8254      %2f                                         
+_column(150 )   byte tm8258      %1f "Check Item T8 for business"            
+_column(151 )   byte tm8260      %2f "Apart from the net income already"     
+_column(153 )    int tm8262      %3f "Person number of first co-owner of"    
+_column(156 )   byte tm8266      %2f "Indication of loss for business"       
+_column(158 )    int tm8268      %3f "Person number of second co-owner of"   
+_column(161 )   byte tm8272      %2f "Indication of loss for business"       
+_column(163 )   byte tm8276      %1f "Check Item T10"                        
+_column(164 )   byte tm8280      %2f "Indication of loss"                    
+_column(166 )   byte tm9330      %2f "Does ... have an individual retirement"
+_column(168 )   byte tm9332      %2f "Did ... make any contributions to IRA" 
+_column(170 )   byte tm9336      %2f "Did ... make any withdrawals from"     
+_column(172 )   byte tm9342      %1f "Certificates of deposit or other"      
+_column(173 )   byte tm9344      %1f "Money market funds"                    
+_column(174 )   byte tm9346      %1f "U.S. government securities"            
+_column(175 )   byte tm9348      %1f "Municipal or corporate bonds"          
+_column(176 )   byte tm9350      %1f "U.S. Savings Bonds"                    
+_column(177 )   byte tm9352      %1f "Stocks or mutual fund shares"          
+_column(178 )   byte tm9354      %1f "Other assets"                          
+_column(179 )   byte tm9356      %1f "Don't know types of assets"            
+_column(180 )   byte tm9358      %2f "Does...have a KEOGH account in ...'s"  
+_column(182 )   byte tm9360      %2f "Did ... make any contributions to a"   
+_column(184 )   byte tm9364      %2f "Did...make any withdrawals from...'s"  
+_column(186 )   byte tm9370      %1f "Certificates of deposit or other"      
+_column(187 )   byte tm9372      %1f "Money market funds"                    
+_column(188 )   byte tm9374      %1f "U.S. government securities"            
+_column(189 )   byte tm9376      %1f "Municipal or corporate bonds"          
+_column(190 )   byte tm9378      %1f "U.S. savings bonds"                    
+_column(191 )   byte tm9380      %1f "Stocks or mutual fund shares"          
+_column(192 )   byte tm9382      %1f "Other assets"                          
+_column(193 )   byte tm9384      %1f "Don't know of other assets"            
+_column(194 )   byte tm9385      %1f "Are the names of any employers listed" 
+_column(195 )   byte tm9386      %2f "During 1991, did ... participate in a" 
+_column(197 )    int tmebcnt     %3f "Number of items with data on"          
+_column(201 )   byte tm9390      %1f "Check Item T26"                        
+_column(202 )   byte tm9392      %1f "Did ... file a federal income tax"     
+_column(203 )   byte tm9394      %1f "Do you have a copy of the tax form"    
+_column(204 )   byte tm9396      %2f "What was ...'s filing status on ...'s" 
+_column(206 )   byte tm9398      %2f "What were the total number of exemptio"
+_column(208 )   byte tm9414      %1f "Did ... claim exemptions for any"      
+_column(209 )   byte tm9416      %1f "First dependent"                       
+_column(210 )   byte tm9418      %1f "Second dependent"                      
+_column(211 )   byte tm9420      %2f "Did ... file Form 1040, the long form" 
+_column(213 )   byte tm9422      %2f "Schedule A - itemized deductions"      
+_column(215 )   byte tm9424      %2f "Schedule D - capital gains and"        
+_column(217 )   byte tm9486      %1f "Check Item T35"                        
+_column(218 )   byte tm9488      %1f "Check Item T36"                        
+_column(219 )   byte tm9490      %1f "Did ... pay any property taxes on ...'"
+_column(220 )   byte tm9492      %1f "Did ... pay these jointly with some-"  
+_column(221 )    int tm9494      %3f "Person one"                            
+_column(224 )    int tm9496      %3f "Person two"                            
+_column(227 )   byte tm9498      %2f "What was the property tax bill for"    
+_column(229 )   byte tmpicnt     %2f "Number of items with data on"          
+_column(233 )   byte tm9610      %1f "Was ... enrolled in school anytime"    
+_column(234 )   byte tm9612      %2f "At what level or grade was..."         
+_column(236 )   byte tm9614      %1f "Check item T37"                        
+_column(237 )   byte tm9616      %1f "Was ... enrolled in a public school?"  
+_column(238 )   long tm9618      %5f "During the past year what was the"     
+_column(243 )    int tm9620      %4f "What was the total cost of ...'s"      
+_column(247 )   byte tm9622      %1f "Did ... live away from home while"     
+_column(248 )   long tm9624      %5f "What was the total cost for room and"  
+_column(253 )   byte tm9626      %2f "Any type of educational assistance"    
+_column(255 )   byte tm9628      %1f "The GI bill?"                          
+_column(256 )    int tm9630      %4f "Percent received from GI bill"         
+_column(260 )   byte tm9632      %1f "Other veteran's educational assis-"    
+_column(261 )   long tm9634      %5f "Percent received from veteran's"       
+_column(266 )   byte tm9636      %1f "College work study program?"           
+_column(267 )    int tm9638      %4f "Percent received from college work"    
+_column(271 )   byte tm9640      %1f "A Pell grant?"                         
+_column(272 )    int tm9642      %4f "Percent received from Pell grant"      
+_column(276 )   byte tm9644      %1f "A Supplemental Educational"            
+_column(277 )    int tm9646      %4f "Percent received from SEOG"            
+_column(281 )   byte tm9648      %1f "A national direct student loan?"       
+_column(282 )    int tm9650      %4f "Percent received from a national"      
+_column(286 )   byte tm9652      %1f "A guaranteed student loan"             
+_column(287 )   long tm9654      %5f "Percent received from a guaranteed"    
+_column(292 )   byte tm9656      %1f "A JTPA training program"               
+_column(293 )    int tm9658      %4f "Percent received from JTPA"            
+_column(297 )   byte tm9660      %1f "Employer assistance"                   
+_column(298 )   long tm9662      %5f "Percent of employer assistance"        
+_column(303 )   byte tm9664      %1f "A fellowship or scholarship?"          
+_column(304 )   long tm9666      %5f "Percent of fellowship or scholarship"  
+_column(309 )   byte tm9668      %1f "A tuition reduction?"                  
+_column(310 )    int tm9670      %4f "Percent received from tuition"         
+_column(314 )   byte tm9672      %1f "Anything else (other than assistance"  
+_column(315 )   long tm9674      %5f "Percent of educational assistance"     
+_column(320 )   byte tmetcnt     %2f "Number of items with data on"          
+_column(322 )   byte tm_ifc1     %1f "Part C imputation flag #01"            
+_column(323 )   byte tm_ifc2     %1f "Part C imputation flag #02"            
+_column(324 )   byte tm_ifc3     %1f "Part C imputation flag #03"            
+_column(325 )   byte tm_ifc4     %1f "Part C imputation flag #04"            
+_column(326 )   byte tm_ifc5     %1f "Part C imputation flag #05"            
+_column(327 )   byte tm_ifc6     %1f "Part C imputation flag #06"            
+_column(328 )   byte tm_ifc7     %1f "Part C imputation flag #07"            
+_column(329 )   byte tm_ifc8     %1f "Part C imputation flag #08"            
+_column(330 )   byte tm_ifc9     %1f "Part C imputation flag #09"            
+_column(331 )   byte tm_ifc10    %1f "Part C imputation flag #10"            
+_column(332 )   byte tm_ifc11    %1f "Part C imputation flag #11"            
+_column(333 )   byte tm_ifc12    %1f "Part C imputation flag #12"            
+_column(334 )   byte tm_ifc13    %1f "Part C imputation flag #13"            
+_column(335 )   byte tm_ifc14    %1f "Part C imputation flag #14"            
+_column(336 )   byte tm_ifc15    %1f "Part C imputation flag #15"            
+_column(337 )   byte tm_ifc16    %1f "Part C imputation flag #16"            
+_column(338 )   byte tm_ifc17    %1f "Part C imputation flag #17"            
+_column(339 )   byte tm_ifc18    %1f "Part C imputation flag #18"            
+_column(340 )   long tmtedfin    %5f "Total amount of educational assistance"
+
+}
+/*
+Copyright 2004 shared by the National Bureau of Economic Research and Jean Roth
+
+National Bureau of Economic Research.
+1050 Massachusetts Avenue
+Cambridge, MA 02138
+jroth@nber.org
+
+This program and all programs referenced in it are free software. You
+can redistribute the program or modify it under the terms of the GNU
+General Public License as published by the Free Software Foundation;
+either version 2 of the License, or (at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with this program; if not, write to the Free Software
+Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307
+USA.
+*/

@@ -1,0 +1,87 @@
+infile dictionary { 
+*This program reads the 2008 SIPP Wave 13 Topical Module Data File
+*by Jean Roth Wed Jan 29 17:47:30 EST 2014
+
+*Please report errors to jroth@nber.org
+*See the .do file for directions and run with do sippp08putm13
+*NOTE:  This program is distributed under the GNU GPL. 
+*See end of this file and http://www.gnu.org/licenses/ for details.
+*by Jean Roth Wed Jan 29 17:47:30 EST 2014
+*Please report errors to jroth@nber.org
+*run with do sippp08putm13
+*Change output file name/location as desired in the first line of the .dct file
+*If you are using a PC, you may need to change the direction of the slashes, as in C:\
+*  or "\\Nber\home\data\sipp\2008\sippp08putm13.dat"
+* The following changes in variable names have been made, if necessary:
+*      '$' to 'd';            '-' to '_';              '%' to 'p';
+* Note:  Variable names in Stata are case-sensitive
+
+_column(1   )   long ssuseq      %5f "SU: Sequence Number of Sample Unit - Primary"
+_column(6   )  str12 ssuid      %12s "SU: Sample Unit Identifier"            
+_column(18  )    int spanel      %4f "SU: Sample Code - Indicates Panel Year"
+_column(22  )   byte swave       %2f "SU: Wave of data collection"           
+_column(24  )   byte srotaton    %1f "SU: Rotation of data collection"       
+_column(25  )   byte tfipsst     %2f "HH: FIPS State Code"                   
+_column(27  )    int shhadid     %3f "SU: Hhld Address ID differentiates hhlds in"
+_column(30  )    int eoutcome    %3f "HH: Interview Status code for this household"
+_column(33  )    int rfid        %3f "FA: Family ID Number for this month"   
+_column(36  )    int rfid2       %3f "FA: Family ID excluding related subfamily"
+_column(39  )    int eppidx      %3f "PE: Person index"                      
+_column(42  )   str3 eentaid     %3s "PE: Address ID of hhld where person entered"
+_column(45  )   str4 epppnum     %4s "PE: Person number"                     
+_column(49  )   byte epopstat    %1f "PE: Population status based on age in 4th"
+_column(50  )   byte eppintvw    %2f "PE: Person's interview status"         
+_column(52  )   byte eppmis4     %1f "PE: Person's 4th month interview status"
+_column(53  )   byte esex        %1f "PE: Sex of this person"                
+_column(54  )   byte erace       %1f "PE: The race(s) the respondent is"     
+_column(55  )   byte eorigin     %2f "PE: Spanish, Hispanic or Latino"       
+_column(57  ) double wpfinwgt %10.4f "WW: Person weight"                     
+_column(67  )   byte errp        %2f "PE: Household relationship"            
+_column(69  )   byte tage        %2f "PE: Age as of last birthday"           
+_column(71  )   byte ems         %1f "PE: Marital status"                    
+_column(72  )    int epnspous    %4f "PE: Person number of spouse"           
+_column(76  )    int epnmom      %4f "PE: Person number of mother"           
+_column(80  )    int epndad      %4f "PE: Person number of father"           
+_column(84  )    int epnguard    %4f "PE: Person number of guardian"         
+_column(88  )   byte rdesgpnt    %2f "PE: Designated parent or guardian flag"
+_column(90  )   byte eeducate    %2f "ED: Highest Degree received or grade completed"
+_column(92  )   str8 lgtkey      %8s "PE: Person longitudinal key"           
+_column(100 )    int sinthhid    %3f "SU: Hhld Address ID of person in interview"
+_column(103 )   byte eaecunv     %2f "AEC: Universe indicator."              
+_column(105 )   byte iprocert    %2f "AEC: Have a professional or state or industry"
+_column(107 )   byte iwhopcer    %2f "AEC: Who awarded this certification or license"
+_column(109 )   byte iwhypcer    %2f "AEC: Mainly for work-related or personal"
+_column(111 )   byte ifldpcer    %2f "AEC: Major subject or field of study"  
+_column(113 )   byte ijobpcer    %2f "AEC: Can cert be used to get a job"    
+_column(115 )   byte irjpcert    %2f "AEC: Is certification or license required"
+_column(117 )   byte itrnpcer    %2f "AEC: Take course or training to earn cert or"
+_column(119 )   byte iexpcert    %2f "AEC: Demo skills take test or exam to earn"
+_column(121 )   byte icdpcert    %2f "AEC: Take test or class or earn CEUs"  
+_column(123 )   byte icert       %2f "AEC: Ever earned this type of certificate"
+_column(125 )   byte ifldcert    %2f "AEC: MOST RECENT completed certificate"
+_column(127 )   byte ischcert    %2f "AEC: Type of school or organization"   
+_column(129 )   byte isdycert    %2f "AEC: Mainly self-study or classes or course"
+_column(131 )   byte itimcert    %2f "AEC: How long to earn certificate"     
+
+}
+
+** Copyright 2014 shared by the National Bureau of Economic Research and Jean Roth ;
+
+** National Bureau of Economic Research. ;
+** 1050 Massachusetts Avenue ;
+** Cambridge, MA 02138 ;
+** jroth@nber.org ;
+
+** This program and all programs referenced in it are free software. You ;
+** can redistribute the program or modify it under the terms of the GNU ;
+** General Public License as published by the Free Software Foundation; 
+** either version 2 of the License, or (at your option) any later version. ;
+
+** This program is distributed in the hope that it will be useful, ;
+** but WITHOUT ANY WARRANTY, without even the implied warranty of ;
+** MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the ;
+** GNU General Public License for more details. ;
+
+** You should have received a copy of the GNU General Public License ;
+** along with this program, if not, write to the Free Software ;
+** Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307 USA. ;

@@ -1,0 +1,75 @@
+    average productivity:  1.0049  ,   1.0000
+                  rhop_p:  0.7822  ,   0.7530
+                 sigma_p:  0.0092  ,   0.0094
+ave unemp (earlier empl):  0.0528  ,   0.0510
+repeat mob stay|prev.stay  0.6089  ,   0.6340
+  rel occ mob young/prime  1.0928  ,   1.1626
+    sep rate young/prime:  2.2439  ,   1.9944
+  rel. sep rate hire/empl  4.8155  , Infinity
+prob u within 3yrs for em  0.1620  ,   0.1222
+  emp. elas matching fcn:  0.5546  ,   0.5000
+  emp return tenure, 5yr:  0.1568  ,   0.1540
+ emp return tenure, 10yr:  0.2579  ,   0.2320
+rel u.dur movers/stayers:  1.2391  ,   1.1387
+ 
+   occmob, duration >= 1:  0.5228  ,   0.5374
+   occmob, duration >= 2:  0.5442  ,   0.5505
+   occmob, duration >= 4:  0.5730  ,   0.5903
+   occmob, duration >= 8:  0.6147  ,   0.6227
+  occmob, duration >= 10:  0.6306  ,   0.6501
+  occmob, duration >= 12:  0.6406  ,   0.6766
+ 
+   u.survival profile 2m:  0.8170  ,   0.8363
+   u.survival profile 4m:  0.5832  ,   0.5706
+   u.survival profile 8m:  0.3316  ,   0.3263
+   u.survival profile 12:  0.2060  ,   0.2133
+   u.survival profile 16:  0.1345  ,   0.1533
+   u.survival profile 20:  0.0909  ,   0.1172
+ 
+    u.survival young  2m:  0.7833  ,   0.7968
+    u.survival young  4 :  0.5259  ,   0.5148
+    u.survival young  8 :  0.2724  ,   0.2901
+    u.survival young  12:  0.1580  ,   0.1721
+    u.survival young  16:  0.0972  ,   0.1161
+    u.survival young  20:  0.0621  ,   0.0804
+ 
+    u.survival prime  2m:  0.8308  ,   0.8535
+    u.survival prime  4m:  0.6066  ,   0.5868
+    u.survival prime  8m:  0.3549  ,   0.3348
+    u.survival prime  12:  0.2247  ,   0.2161
+    u.survival prime  16:  0.1489  ,   0.1570
+    u.survival prime  20:  0.1016  ,   0.1148
+ 
+  occmob young w. dur 2 :  0.4958  ,   0.5176
+  occmob young w. dur 4 :  0.5250  ,   0.5473
+  occmob young w. dur 8 :  0.5674  ,   0.6014
+  occmob young w. dur 10:  0.5852  ,   0.6269
+  occmob young w. dur 12:  0.5979  ,   0.6792
+ 
+  occmob prime w. dur 2 :  0.4162  ,   0.4229
+  occmob prime w. dur 4 :  0.4549  ,   0.4848
+  occmob prime w. dur 8 :  0.5120  ,   0.5090
+  occmob prime w. dur 10:  0.5319  ,   0.5388
+  occmob prime w. dur 12:  0.5453  ,   0.5447
+ 
+ occmob dur 1 good times:  0.4591  ,   0.4542
+ occmob dur 2 good times:  0.4816  ,   0.4740
+ occmob dur 3 good times:  0.4965  ,   0.4929
+ occmob dur 4 good times:  0.5096  ,   0.5223
+ occmob dur 5 good times:  0.5230  ,   0.5456
+ occmob dur 6 good times:  0.5354  ,   0.5575
+ occmob dur 7 good times:  0.5459  ,   0.5460
+ occmob dur 8 good times:  0.5550  ,   0.5441
+ 
+  occmob dur 1 bad times:  0.4136  ,   0.4411
+  occmob dur 2 bad times:  0.4446  ,   0.4582
+  occmob dur 3 bad times:  0.4667  ,   0.4771
+  occmob dur 4 bad times:  0.4855  ,   0.5081
+  occmob dur 5 bad times:  0.5042  ,   0.5124
+  occmob dur 6 bad times:  0.5184  ,   0.5308
+  occmob dur 7 bad times:  0.5328  ,   0.5360
+  occmob dur 8 bad times:  0.5428  ,   0.5553
+  occmob dur 9 bad times:  0.5531  ,   0.5778
+ occmob dur 10 bad times:  0.5613  ,   0.6080
+ occmob dur 11 bad times:  0.5694  ,   0.6051
+ occmob dur 12 bad times:  0.5792  ,   0.6387

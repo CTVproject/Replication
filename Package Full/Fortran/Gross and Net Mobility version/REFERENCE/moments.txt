@@ -1,0 +1,135 @@
+                  MOMENT:   MODEL  ,     DATA
+    average productivity:  0.9994  ,   1.0000
+                  rhop_p:  0.7640  ,   0.7530
+                 sigma_p:  0.0092  ,   0.0094
+ave unemp (earlier empl):  0.0356  ,   0.0355
+repeat mob stay|prev.stay  0.5977  ,   0.6340
+  rel occ mob young/prime  1.1727  ,   1.1626
+    sep rate young/prime:  2.0017  ,   1.9944
+  rel. sep rate hire/empl  5.1689  ,   4.9467
+prob u within 3yrs for em  0.1506  ,   0.1222
+  emp. elas matching fcn:  0.5321  ,   0.5000
+  emp return tenure, 5yr:  0.1429  ,   0.1540
+ emp return tenure, 10yr:  0.2191  ,   0.2320
+rel u.dur movers/stayers:  1.1844  ,   1.1387
+ 
+   occmob, duration >= 1:  0.5318  ,   0.5316
+   occmob, duration >= 2:  0.5542  ,   0.5456
+   occmob, duration >= 4:  0.5808  ,   0.5756
+   occmob, duration >= 8:  0.6095  ,   0.6051
+  occmob, duration >= 10:  0.6191  ,   0.6223
+  occmob, duration >= 12:  0.6270  ,   0.6394
+ 
+   u.survival profile 2m:  0.7632  ,   0.7580
+   u.survival profile 4m:  0.4712  ,   0.4570
+   u.survival profile 8m:  0.2180  ,   0.2080
+   u.survival profile 12:  0.1178  ,   0.1200
+   u.survival profile 16:  0.0693  ,   0.0760
+   u.survival profile 20:  0.0428  ,   0.0480
+ 
+    u.survival young  2m:  0.7090  ,   0.6970
+    u.survival young  4 :  0.3810  ,   0.3810
+    u.survival young  8 :  0.1415  ,   0.1560
+    u.survival young  12:  0.0648  ,   0.0730
+    u.survival young  16:  0.0329  ,   0.0380
+    u.survival young  20:  0.0177  ,   0.0202
+ 
+    u.survival prime  2m:  0.7858  ,   0.7770
+    u.survival prime  4m:  0.5089  ,   0.4850
+    u.survival prime  8m:  0.2497  ,   0.2340
+    u.survival prime  12:  0.1395  ,   0.1370
+    u.survival prime  16:  0.0838  ,   0.0900
+    u.survival prime  20:  0.0526  ,   0.0610
+ 
+  occmob young w. dur 2 :  0.5354  ,   0.5395
+  occmob young w. dur 4 :  0.5774  ,   0.5461
+  occmob young w. dur 8 :  0.6227  ,   0.6169
+  occmob young w. dur 10:  0.6383  ,   0.6308
+  occmob young w. dur 12:  0.6513  ,   0.6891
+ 
+  occmob prime w. dur 2 :  0.4342  ,   0.4191
+  occmob prime w. dur 4 :  0.4673  ,   0.4720
+  occmob prime w. dur 8 :  0.5045  ,   0.4871
+  occmob prime w. dur 10:  0.5173  ,   0.4986
+  occmob prime w. dur 12:  0.5265  ,   0.4798
+ 
+ occmob dur 1 good times:  0.4903  ,   0.4593
+ occmob dur 2 good times:  0.5173  ,   0.4850
+ occmob dur 3 good times:  0.5328  ,   0.5077
+ occmob dur 4 good times:  0.5420  ,   0.5260
+ occmob dur 5 good times:  0.5484  ,   0.5421
+ occmob dur 6 good times:  0.5538  ,   0.5567
+ occmob dur 7 good times:  0.5585  ,   0.5692
+ occmob dur 8 good times:  0.5618  ,   0.5802
+ 
+  occmob dur 1 bad times:  0.3938  ,   0.4329
+  occmob dur 2 bad times:  0.4259  ,   0.4456
+  occmob dur 3 bad times:  0.4502  ,   0.4582
+  occmob dur 4 bad times:  0.4695  ,   0.4707
+  occmob dur 5 bad times:  0.4851  ,   0.4833
+  occmob dur 6 bad times:  0.4979  ,   0.4960
+  occmob dur 7 bad times:  0.5085  ,   0.5090
+  occmob dur 8 bad times:  0.5179  ,   0.5213
+  occmob dur 9 bad times:  0.5257  ,   0.5312
+ occmob dur 10 bad times:  0.5323  ,   0.5366
+ occmob dur 11 bad times:  0.5383  ,   0.5350
+ occmob dur 12 bad times:  0.5427  ,   0.5271
+ 
+ 
+  NET MOBILITY MOMENTS
+ 
+ SUPEROCC TRANSITION MATRIX (TARGETED)
+          transmatrix1_1:  0.7633  ,   0.7215
+          transmatrix1_2:  0.1634  ,   0.1669
+          transmatrix1_3:  0.0550  ,   0.0840
+          transmatrix1_4:  0.0182  ,   0.0277
+          transmatrix2_1:  0.1752  ,   0.0784
+          transmatrix2_2:  0.6812  ,   0.6807
+          transmatrix2_3:  0.1078  ,   0.1676
+          transmatrix2_4:  0.0358  ,   0.0734
+  
+          transmatrix3_1:  0.0343  ,   0.0199
+          transmatrix3_2:  0.0642  ,   0.1153
+          transmatrix3_3:  0.7604  ,   0.7099
+          transmatrix3_4:  0.1410  ,   0.1549
+          transmatrix4_1:  0.0369  ,   0.0134
+          transmatrix4_2:  0.0694  ,   0.0658
+          transmatrix4_3:  0.2463  ,   0.1876
+          transmatrix4_4:  0.6474  ,   0.7332
+ ENDPOINT DISTRIBUTION
+occ distr end, superocc1:  0.3374  ,   0.3285
+occ distr end, superocc2:  0.2460  ,   0.2579
+occ distr end, superocc3:  0.2597  ,   0.2596
+occ distr end, superocc4:  0.1569  ,   0.1540
+ NET MOBILITY RATE, TIME AVERAGE
+    ave netmob superocc1:  0.0083  ,   0.0060
+    ave netmob superocc2:  0.0070  ,   0.0005
+    ave netmob superocc3: -0.0266  ,  -0.0214
+    ave netmob superocc4:  0.0113  ,   0.0149
+  SUPER OCC MOBILITY AND KEY RELATION BETWEEN INFLOWS AND NET FLOWS, REGRESSION
+grand ave superocc stayin  0.7201  ,   0.7116
+     appxfig 3b relation: -2.2040  ,  -2.5757
+  NET INFLOW DISTRIBUTION CHANGE OVER THE CYCLE
+cycl change inflow prop,  -0.0026  ,  -0.0096
+cycl change inflow prop,   0.0044  ,   0.0032
+cycl change inflow prop,  -0.0280  ,  -0.0540
+cycl change inflow prop,   0.0262  ,   0.0605
+  NET FLOWS IN RECESSINOS AND EXPANSIONS, PER SUPEROCC
+net flow recession, s.occ  0.0075  ,   0.0108
+net flow recession, s.occ  0.0085  ,   0.0053
+net flow recession, s.occ -0.0331  ,  -0.0327
+net flow recession, s.occ  0.0171  ,   0.0167
+net flow expansion, s.occ  0.0094  ,   0.0025
+net flow expansion, s.occ  0.0052  ,   0.0006
+net flow expansion, s.occ -0.0204  ,  -0.0111
+net flow expansion, s.occ  0.0058  ,   0.0080
+ ELAS U DURATION IN SUPEROCC, to UNEMPLOYMENT RATE, NORMALIZED
+duration elasticity s.occ  0.9884  ,   1.0976
+duration elasticity s.occ  1.0554  ,   1.0275
+duration elasticity s.occ  0.8895  ,   0.7601
+duration elasticity s.occ  1.0720  ,   1.1206
+ CYCLICAL RESPONSE NETFLOWS (implied by previous moments)
+cycl change netflow, s.oc  0.0019  ,  -0.0083
+cycl change netflow, s.oc -0.0033  ,  -0.0046
+cycl change netflow, s.oc  0.0127  ,   0.0216
+cycl change netflow, s.oc -0.0114  ,  -0.0087

@@ -1,0 +1,45 @@
+dictionary using sipp91db.dat  { 
+*This program reads the 1991 SIPP Type of Death Benefit Data File
+*Note:  This program is distributed under the GNU GPL. See end of
+*this file and http://www.gnu.org/licenses/ for details.
+*by Jean Roth Mon Jun  7 18:31:04 EDT 2004
+*Please report errors to jroth@nber.org
+*run with do sip91db
+*Change output file name/location as desired in the first line of the .dct file
+*If you are using a PC, you may need to change the direction of the slashes, as in C:\
+*  or "\\Nber\home\data\sipp\1991\sip91db.dat"
+* The following changes in variable names have been made, if necessary:
+*      '$' to 'd';            '-' to '_';              '%' to 'p';
+* Note:  Variable names in Stata are case-sensitive
+
+_column(1   )   str9 suid        %9s "Sample unit identifier"                
+_column(10  )   str2 entry       %2s "Entry address ID"                      
+_column(12  )   str3 pnum        %3s "Person number"                         
+_column(15  )   byte tobd90      %2f "Type of OASDI benefit in current payme"
+_column(18  )    int ssayod      %4f "MBR/SSR year of death"                 
+_column(22  )    int panel       %4f "SIPP panel"                            
+
+}
+/*
+Copyright 2004 shared by the National Bureau of Economic Research and Jean Roth
+
+National Bureau of Economic Research.
+1050 Massachusetts Avenue
+Cambridge, MA 02138
+jroth@nber.org
+
+This program and all programs referenced in it are free software. You
+can redistribute the program or modify it under the terms of the GNU
+General Public License as published by the Free Software Foundation;
+either version 2 of the License, or (at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with this program; if not, write to the Free Software
+Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307
+USA.
+*/

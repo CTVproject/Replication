@@ -1,0 +1,93 @@
+This document contains 
+(1) the license information on programs and data of others included in the replication package
+(2) the license information on our original programs (incl. .do and .f90 files)
+
+
+
+
+
+
+**********************************************
+**** (1) LICENSE PROGRAMS/DATA USED       ****
+**********************************************
+
+
+**** SOFTWARE ****
+This replication package uses the TSW+ program (windows installer) that runs TRAMO/SEATS, for dealing with timeseries that include gaps. 
+This is freeware, and can be downloaded e.g. from our github site. LINK HERE. 
+
+
+TRAMO/SEATS has been developed by Victor Gómez and Agustín Maravall from the Bank of Spain: 
+    - Gómez, Victor, and Agustín Maravall Herrero. Programs TRAMO and SEATS: instructions for the user (beta version: September 1996). Banco de España. Servicio de Estudios, 1996.
+    - Maravall A, Gómez V, Caporello G. Statistical and econometrics software: Tramo and seats. Statistical and Econometrics Software. 2015.
+    - Caporello, Gianluca, and Agustín Maravall. "Program Tsw." Revised manual. Version May (2004).
+
+Alternatively integration of TRAMO/SEATS into Gretl is freely available from 
+    https://gretl.sourceforge.net/tramo/tramo-seats.html and https://sourceforge.net/projects/gretl/files/tramo/
+    (and http://www.bde.es/bde/es/secciones/servicios/Profesionales/Programas_estadi/Programas_estad_d9fa7f3710fd821.html and
+    https://www.bde.es/bde/en/secciones/servicios/Profesionales/Programas_estadi/Programas.html/)
+
+
+
+***** DATA *********
+
+- the Survey of Income and Program Participations is a nationally representative longitudinal survey run by the US Census Bureau. We have accessed it through the NBER's public use data archive, using Jean Roth's (NBER) do/dct files for the SIPP, made available under a GNU GPL license.
+
+- This replication package also uses CPS - IPUMS data. (Sarah Flood, Miriam King, Renae Rodgers, Steven Ruggles, J. Robert Warren and Michael Westberry. Integrated Public Use Microdata Series, Current Population Survey: Version 10.0 [dataset]. Minneapolis, MN: IPUMS, 2022. https://doi.org/10.18128/D030.V10.0)
+
+-- We further use the occupational crosswalks provided by David Dorn (www.ddorn.net; David Autor and David Dorn. "The Growth of Low Skill Service Jobs and the Polarization of the U.S. Labor Market." American Economic Review, 103(5), 1553-1597, 2013.). 
+
+-- For the vacancy time series, we use the Help Wanted Index kindly provided by Regis Barnichon's HWI. (Barnichon, Regis. "Building a composite help-wanted index." Economics Letters 109.3 (2010): 175-178. and Barnichon, Regis, et al. "The ins and outs of forecasting unemployment: Using labor force flows to forecast the labor market." Brookings Papers on Economic Activity (2012): 83-131.)
+
+
+
+**********************************************
+**** (2) LICENSE OWN MATERIAL             ****
+**********************************************
+
+All original contributions (incl. STATA do-files and Fortran files) in this replication package are copyrighted, and made available under the conditions below
+
+
+********************************************************************************
+*
+* Copyright 2023 Ludo Visschers and Carlos Carrillo-Tudela
+*
+*
+* Redistribution and use in source and binary forms, with or without 
+*	modification, are permitted provided that the following conditions are met:
+*
+* 1. Redistributions of source code must retain the above copyright notice, 
+*	this list of conditions and the following disclaimer.
+*
+* 2. Redistributions in binary form must reproduce the above copyright notice, 
+*	this list of conditions and the following disclaimer in the documentation 
+*	and/or other materials provided with the distribution.
+*
+* 3. Neither the name of the copyright holder nor the names of its contributors 
+*	may be used to endorse or promote products derived from this software 
+*	without specific prior written permission.
+*
+* 4. If using this code or its results (whole or in part, with or without 
+* 	modifications) in academic work, please cite:  
+*		Carrillo-Tudela, Carlos and Ludo Visschers, "Unemployment and Endogenous 
+*		Reallocation over the Business Cycle" 
+*	in its published version, in the references of the publications associated 
+*	with aforementioned academic work.
+*
+*
+* THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" 
+* AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE 
+* IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
+* DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE 
+* FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL 
+* DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR 
+* SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER 
+* CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, 
+* OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE 
+* OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+*
+
+********************************************************************************
+
+
+

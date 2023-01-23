@@ -1,0 +1,155 @@
+infile dictionary { 
+*This program reads the 1996 SIPP Longitudinal Replicate Weight File for Calendar Year Data File
+*by Jean Roth Wed Sep  3 16:08:26 EDT 2014
+
+*Please report errors to jroth@nber.org
+*See the .do file for directions and run with do sipp1996lrw96cy3
+*NOTE:  This program is distributed under the GNU GPL. 
+*See end of this file and http://www.gnu.org/licenses/ for details.
+*by Jean Roth Wed Sep  3 16:08:26 EDT 2014
+*Please report errors to jroth@nber.org
+*run with do sipp1996lrw96cy3
+*Change output file name/location as desired in the first line of the .dct file
+*If you are using a PC, you may need to change the direction of the slashes, as in C:\
+*  or "\\Nber\home\data\sipp\1996\sipp1996lrw96cy3.dat"
+* The following changes in variable names have been made, if necessary:
+*      '$' to 'd';            '-' to '_';              '%' to 'p';
+* Note:  Variable names in Stata are case-sensitive
+
+_column(1   )  str12 ssuid      %12s "SU:  Sample Unit Identifier"           
+_column(13  )    int spanel      %4f "SU:	Sample Code - Indicates Panel Year"
+_column(17  )   str7 ctl_date    %7s "Date of the controls to which weights correspond"
+_column(24  )   str3 lgtwttyp    %3s "Weighting designation describing the longitudinal period for which the"
+_column(27  )   byte pnllength    %2f                                         
+_column(29  )   str4 epppnum     %4s                                         
+ _column(33 ) double repwgt1    %10.4f "WW: Person replicate weight 1. (Four implied decimal positions)"
+ _column(43 ) double repwgt2    %10.4f "WW: Person replicate weight 2. (Four implied decimal positions)"
+ _column(53 ) double repwgt3    %10.4f "WW: Person replicate weight 3. (Four implied decimal positions)"
+ _column(63 ) double repwgt4    %10.4f "WW: Person replicate weight 4. (Four implied decimal positions)"
+ _column(73 ) double repwgt5    %10.4f "WW: Person replicate weight 5. (Four implied decimal positions)"
+ _column(83 ) double repwgt6    %10.4f "WW: Person replicate weight 6. (Four implied decimal positions)"
+ _column(93 ) double repwgt7    %10.4f "WW: Person replicate weight 7. (Four implied decimal positions)"
+ _column(103 ) double repwgt8    %10.4f "WW: Person replicate weight 8. (Four implied decimal positions)"
+ _column(113 ) double repwgt9    %10.4f "WW: Person replicate weight 9. (Four implied decimal positions)"
+ _column(123 ) double repwgt10    %10.4f "WW: Person replicate weight 10. (Four implied decimal positions)"
+ _column(133 ) double repwgt11    %10.4f "WW: Person replicate weight 11. (Four implied decimal positions)"
+ _column(143 ) double repwgt12    %10.4f "WW: Person replicate weight 12. (Four implied decimal positions)"
+ _column(153 ) double repwgt13    %10.4f "WW: Person replicate weight 13. (Four implied decimal positions)"
+ _column(163 ) double repwgt14    %10.4f "WW: Person replicate weight 14. (Four implied decimal positions)"
+ _column(173 ) double repwgt15    %10.4f "WW: Person replicate weight 15. (Four implied decimal positions)"
+ _column(183 ) double repwgt16    %10.4f "WW: Person replicate weight 16. (Four implied decimal positions)"
+ _column(193 ) double repwgt17    %10.4f "WW: Person replicate weight 17. (Four implied decimal positions)"
+ _column(203 ) double repwgt18    %10.4f "WW: Person replicate weight 18. (Four implied decimal positions)"
+ _column(213 ) double repwgt19    %10.4f "WW: Person replicate weight 19. (Four implied decimal positions)"
+ _column(223 ) double repwgt20    %10.4f "WW: Person replicate weight 20. (Four implied decimal positions)"
+ _column(233 ) double repwgt21    %10.4f "WW: Person replicate weight 21. (Four implied decimal positions)"
+ _column(243 ) double repwgt22    %10.4f "WW: Person replicate weight 22. (Four implied decimal positions)"
+ _column(253 ) double repwgt23    %10.4f "WW: Person replicate weight 23. (Four implied decimal positions)"
+ _column(263 ) double repwgt24    %10.4f "WW: Person replicate weight 24. (Four implied decimal positions)"
+ _column(273 ) double repwgt25    %10.4f "WW: Person replicate weight 25. (Four implied decimal positions)"
+ _column(283 ) double repwgt26    %10.4f "WW: Person replicate weight 26. (Four implied decimal positions)"
+ _column(293 ) double repwgt27    %10.4f "WW: Person replicate weight 27. (Four implied decimal positions)"
+ _column(303 ) double repwgt28    %10.4f "WW: Person replicate weight 28. (Four implied decimal positions)"
+ _column(313 ) double repwgt29    %10.4f "WW: Person replicate weight 29. (Four implied decimal positions)"
+ _column(323 ) double repwgt30    %10.4f "WW: Person replicate weight 30. (Four implied decimal positions)"
+ _column(333 ) double repwgt31    %10.4f "WW: Person replicate weight 31. (Four implied decimal positions)"
+ _column(343 ) double repwgt32    %10.4f "WW: Person replicate weight 32. (Four implied decimal positions)"
+ _column(353 ) double repwgt33    %10.4f "WW: Person replicate weight 33. (Four implied decimal positions)"
+ _column(363 ) double repwgt34    %10.4f "WW: Person replicate weight 34. (Four implied decimal positions)"
+ _column(373 ) double repwgt35    %10.4f "WW: Person replicate weight 35. (Four implied decimal positions)"
+ _column(383 ) double repwgt36    %10.4f "WW: Person replicate weight 36. (Four implied decimal positions)"
+ _column(393 ) double repwgt37    %10.4f "WW: Person replicate weight 37. (Four implied decimal positions)"
+ _column(403 ) double repwgt38    %10.4f "WW: Person replicate weight 38. (Four implied decimal positions)"
+ _column(413 ) double repwgt39    %10.4f "WW: Person replicate weight 39. (Four implied decimal positions)"
+ _column(423 ) double repwgt40    %10.4f "WW: Person replicate weight 40. (Four implied decimal positions)"
+ _column(433 ) double repwgt41    %10.4f "WW: Person replicate weight 41. (Four implied decimal positions)"
+ _column(443 ) double repwgt42    %10.4f "WW: Person replicate weight 42. (Four implied decimal positions)"
+ _column(453 ) double repwgt43    %10.4f "WW: Person replicate weight 43. (Four implied decimal positions)"
+ _column(463 ) double repwgt44    %10.4f "WW: Person replicate weight 44. (Four implied decimal positions)"
+ _column(473 ) double repwgt45    %10.4f "WW: Person replicate weight 45. (Four implied decimal positions)"
+ _column(483 ) double repwgt46    %10.4f "WW: Person replicate weight 46. (Four implied decimal positions)"
+ _column(493 ) double repwgt47    %10.4f "WW: Person replicate weight 47. (Four implied decimal positions)"
+ _column(503 ) double repwgt48    %10.4f "WW: Person replicate weight 48. (Four implied decimal positions)"
+ _column(513 ) double repwgt49    %10.4f "WW: Person replicate weight 49. (Four implied decimal positions)"
+ _column(523 ) double repwgt50    %10.4f "WW: Person replicate weight 50. (Four implied decimal positions)"
+ _column(533 ) double repwgt51    %10.4f "WW: Person replicate weight 51. (Four implied decimal positions)"
+ _column(543 ) double repwgt52    %10.4f "WW: Person replicate weight 52. (Four implied decimal positions)"
+ _column(553 ) double repwgt53    %10.4f "WW: Person replicate weight 53. (Four implied decimal positions)"
+ _column(563 ) double repwgt54    %10.4f "WW: Person replicate weight 54. (Four implied decimal positions)"
+ _column(573 ) double repwgt55    %10.4f "WW: Person replicate weight 55. (Four implied decimal positions)"
+ _column(583 ) double repwgt56    %10.4f "WW: Person replicate weight 56. (Four implied decimal positions)"
+ _column(593 ) double repwgt57    %10.4f "WW: Person replicate weight 57. (Four implied decimal positions)"
+ _column(603 ) double repwgt58    %10.4f "WW: Person replicate weight 58. (Four implied decimal positions)"
+ _column(613 ) double repwgt59    %10.4f "WW: Person replicate weight 59. (Four implied decimal positions)"
+ _column(623 ) double repwgt60    %10.4f "WW: Person replicate weight 60. (Four implied decimal positions)"
+ _column(633 ) double repwgt61    %10.4f "WW: Person replicate weight 61. (Four implied decimal positions)"
+ _column(643 ) double repwgt62    %10.4f "WW: Person replicate weight 62. (Four implied decimal positions)"
+ _column(653 ) double repwgt63    %10.4f "WW: Person replicate weight 63. (Four implied decimal positions)"
+ _column(663 ) double repwgt64    %10.4f "WW: Person replicate weight 64. (Four implied decimal positions)"
+ _column(673 ) double repwgt65    %10.4f "WW: Person replicate weight 65. (Four implied decimal positions)"
+ _column(683 ) double repwgt66    %10.4f "WW: Person replicate weight 66. (Four implied decimal positions)"
+ _column(693 ) double repwgt67    %10.4f "WW: Person replicate weight 67. (Four implied decimal positions)"
+ _column(703 ) double repwgt68    %10.4f "WW: Person replicate weight 68. (Four implied decimal positions)"
+ _column(713 ) double repwgt69    %10.4f "WW: Person replicate weight 69. (Four implied decimal positions)"
+ _column(723 ) double repwgt70    %10.4f "WW: Person replicate weight 70. (Four implied decimal positions)"
+ _column(733 ) double repwgt71    %10.4f "WW: Person replicate weight 71. (Four implied decimal positions)"
+ _column(743 ) double repwgt72    %10.4f "WW: Person replicate weight 72. (Four implied decimal positions)"
+ _column(753 ) double repwgt73    %10.4f "WW: Person replicate weight 73. (Four implied decimal positions)"
+ _column(763 ) double repwgt74    %10.4f "WW: Person replicate weight 74. (Four implied decimal positions)"
+ _column(773 ) double repwgt75    %10.4f "WW: Person replicate weight 75. (Four implied decimal positions)"
+ _column(783 ) double repwgt76    %10.4f "WW: Person replicate weight 76. (Four implied decimal positions)"
+ _column(793 ) double repwgt77    %10.4f "WW: Person replicate weight 77. (Four implied decimal positions)"
+ _column(803 ) double repwgt78    %10.4f "WW: Person replicate weight 78. (Four implied decimal positions)"
+ _column(813 ) double repwgt79    %10.4f "WW: Person replicate weight 79. (Four implied decimal positions)"
+ _column(823 ) double repwgt80    %10.4f "WW: Person replicate weight 80. (Four implied decimal positions)"
+ _column(833 ) double repwgt81    %10.4f "WW: Person replicate weight 81. (Four implied decimal positions)"
+ _column(843 ) double repwgt82    %10.4f "WW: Person replicate weight 82. (Four implied decimal positions)"
+ _column(853 ) double repwgt83    %10.4f "WW: Person replicate weight 83. (Four implied decimal positions)"
+ _column(863 ) double repwgt84    %10.4f "WW: Person replicate weight 84. (Four implied decimal positions)"
+ _column(873 ) double repwgt85    %10.4f "WW: Person replicate weight 85. (Four implied decimal positions)"
+ _column(883 ) double repwgt86    %10.4f "WW: Person replicate weight 86. (Four implied decimal positions)"
+ _column(893 ) double repwgt87    %10.4f "WW: Person replicate weight 87. (Four implied decimal positions)"
+ _column(903 ) double repwgt88    %10.4f "WW: Person replicate weight 88. (Four implied decimal positions)"
+ _column(913 ) double repwgt89    %10.4f "WW: Person replicate weight 89. (Four implied decimal positions)"
+ _column(923 ) double repwgt90    %10.4f "WW: Person replicate weight 90. (Four implied decimal positions)"
+ _column(933 ) double repwgt91    %10.4f "WW: Person replicate weight 91. (Four implied decimal positions)"
+ _column(943 ) double repwgt92    %10.4f "WW: Person replicate weight 92. (Four implied decimal positions)"
+ _column(953 ) double repwgt93    %10.4f "WW: Person replicate weight 93. (Four implied decimal positions)"
+ _column(963 ) double repwgt94    %10.4f "WW: Person replicate weight 94. (Four implied decimal positions)"
+ _column(973 ) double repwgt95    %10.4f "WW: Person replicate weight 95. (Four implied decimal positions)"
+ _column(983 ) double repwgt96    %10.4f "WW: Person replicate weight 96. (Four implied decimal positions)"
+ _column(993 ) double repwgt97    %10.4f "WW: Person replicate weight 97. (Four implied decimal positions)"
+ _column(1003 ) double repwgt98    %10.4f "WW: Person replicate weight 98. (Four implied decimal positions)"
+ _column(1013 ) double repwgt99    %10.4f "WW: Person replicate weight 99. (Four implied decimal positions)"
+ _column(1023 ) double repwgt100    %10.4f "WW: Person replicate weight 100. (Four implied decimal positions)"
+ _column(1033 ) double repwgt101    %10.4f "WW: Person replicate weight 101. (Four implied decimal positions)"
+ _column(1043 ) double repwgt102    %10.4f "WW: Person replicate weight 102. (Four implied decimal positions)"
+ _column(1053 ) double repwgt103    %10.4f "WW: Person replicate weight 103. (Four implied decimal positions)"
+ _column(1063 ) double repwgt104    %10.4f "WW: Person replicate weight 104. (Four implied decimal positions)"
+ _column(1073 ) double repwgt105    %10.4f "WW: Person replicate weight 105. (Four implied decimal positions)"
+ _column(1083 ) double repwgt106    %10.4f "WW: Person replicate weight 106. (Four implied decimal positions)"
+ _column(1093 ) double repwgt107    %10.4f "WW: Person replicate weight 107. (Four implied decimal positions)"
+ _column(1103 ) double repwgt108    %10.4f "WW: Person replicate weight 108. (Four implied decimal positions)"
+
+}
+
+** Copyright 2014 shared by the National Bureau of Economic Research and Jean Roth ;
+
+** National Bureau of Economic Research. ;
+** 1050 Massachusetts Avenue ;
+** Cambridge, MA 02138 ;
+** jroth@nber.org ;
+
+** This program and all programs referenced in it are free software. You ;
+** can redistribute the program or modify it under the terms of the GNU ;
+** General Public License as published by the Free Software Foundation; 
+** either version 2 of the License, or (at your option) any later version. ;
+
+** This program is distributed in the hope that it will be useful, ;
+** but WITHOUT ANY WARRANTY, without even the implied warranty of ;
+** MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the ;
+** GNU General Public License for more details. ;
+
+** You should have received a copy of the GNU General Public License ;
+** along with this program, if not, write to the Free Software ;
+** Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307 USA. ;

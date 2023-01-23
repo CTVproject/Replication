@@ -3521,7 +3521,7 @@ return scalar netmobrate_err=`netmobrate_err'
 end
 
 **`'local globals': where to put the output and how to call it
-global outputdir "${step1resultsdir}"
+global outputdir "${step1codedir}"
 global vv "v22"
 
 

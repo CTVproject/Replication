@@ -1,0 +1,119 @@
+dictionary using sipp93t8.dat  { 
+*This program reads the 1993 SIPP Wave 8 Topical Module Data File
+*Note:  This program is distributed under the GNU GPL. See end of
+*this file and http://www.gnu.org/licenses/ for details.
+*by Jean Roth Thu Mar 18 11:55:13 EST 2004
+*Please report errors to jroth@nber.org
+*run with do sip93t8
+*Change output file name/location as desired in the first line of the .dct file
+*If you are using a PC, you may need to change the direction of the slashes, as in C:\
+*  or "\\Nber\home\data\sipp\1993\sip93t8.dat"
+* The following changes in variable names have been made, if necessary:
+*      '$' to 'd';            '-' to '_';              '%' to 'p';
+* Note:  Variable names in Stata are case-sensitive
+
+_column(1   )   long suseqnum    %5f "Sequence number of sample unit"        
+_column(6   )   str9 id          %9s "Sample unit identifier"                
+_column(15  )   byte rotation    %1f "Rotation group"                        
+_column(16  )   byte state       %2f "FIPS state code"                       
+_column(18  )   byte pinx        %2f "Person index from core"                
+_column(20  )   str2 addid       %2s "Current address ID - This field"       
+_column(22  )   byte item36b     %2f "Household interview status code"       
+_column(24  )   byte intvw       %1f "Person's interview status"             
+_column(25  )   byte ppmis1      %1f "Person's interview status:"            
+_column(26  )   byte ppmis2      %1f "Person Interview status: Reference Mon"
+_column(27  )   byte ppmis3      %1f "Person's interview status:"            
+_column(28  )   byte ppmis4      %1f "Person's interview status:"            
+_column(29  )   byte ppmis5      %1f "Person's interview status:"            
+_column(30  )   str2 entry       %2s "Edited entry address ID"               
+_column(32  )   str3 pnum        %3s "Person number"                         
+_column(35  ) double finalwgt %12.4f "Person weight (interview month)"       
+_column(47  )   byte rrp         %1f "Relationship to reference person"      
+_column(48  )    int age         %3f "Age"                                   
+_column(51  )   byte sex         %1f "Sex"                                   
+_column(52  )   byte race        %1f "Race"                                  
+_column(53  )   byte ms          %1f "Marital status"                        
+_column(54  )    int pnsp        %3f "Person number of spouse"               
+_column(57  )    int pnpt        %3f "Person number of parent"               
+_column(60  )   byte higrade     %2f "What is the highest grade or year of"  
+_column(62  )   byte grdcmpl     %1f "Did he/she complete that grade"        
+_column(63  )   byte ethnicty    %2f "Ethnic origin"                         
+_column(65  )   byte wave        %1f "Wave number within Panel"              
+_column(69  )   byte tm9610      %1f "Was ... enrolled in school anytime"    
+_column(70  )   byte tm9612      %2f "At what level or grade was..."         
+_column(72  )   byte tm9614      %1f "Check item T21"                        
+_column(73  )   byte tm9616      %1f "Was...enrolled in a public school?"    
+_column(74  )   long tm9618      %5f "During the past 12 months what"        
+_column(79  )    int tm9620      %4f "During the past 12 months, what was"   
+_column(83  )   byte tm9622      %1f "During the past 12 months, did..."     
+_column(84  )   long tm9624      %5f "During the past 12 months, what"       
+_column(89  )   byte tm9626      %2f "No educational assistance"             
+_column(91  )   byte tm9628      %1f "Educational assistance received"       
+_column(92  )    int tm9630      %4f "Percent of total educational"          
+_column(96  )   byte tm9632      %1f "Educational assistance received"       
+_column(97  )   long tm9634      %5f "Percent of total educational"          
+_column(102 )   byte tm9636      %1f "Educational assistance received"       
+_column(103 )    int tm9638      %4f "Percent of total educational"          
+_column(107 )   byte tm9640      %1f "Educational assistance received"       
+_column(108 )    int tm9642      %4f "Percent of total educational"          
+_column(112 )   byte tm9644      %1f "Educational assistance received"       
+_column(113 )    int tm9646      %4f "Percent of total educational"          
+_column(117 )   byte tm9648      %1f "Educational assistance received"       
+_column(118 )    int tm9650      %4f "Percent of total educational"          
+_column(122 )   byte tm9652      %1f "Educational assistance received during"
+_column(123 )   long tm9654      %5f "Percent of total educational assistanc"
+_column(128 )   byte tm9656      %1f "Educational assistance received"       
+_column(129 )    int tm9658      %4f "Percent of total educational"          
+_column(133 )   byte tm9660      %1f "Educational assistance received"       
+_column(134 )   long tm9662      %5f "Percent of total educational"          
+_column(139 )   byte tm9664      %1f "Educational assistance received"       
+_column(140 )   long tm9666      %5f "Percent of total educational"          
+_column(145 )   byte tm9668      %1f "Educational assistance received"       
+_column(146 )    int tm9670      %4f "Percent of total educational"          
+_column(150 )   byte tm9672      %1f "Educational assistance received"       
+_column(151 )   long tm9674      %5f "Percent of total educational"          
+_column(156 )   byte tmetcnt     %2f "Number of non-blank entries"           
+_column(158 )   byte imp9612     %1f "Imputation flag for 'TM9612'"          
+_column(159 )   byte imp9616     %1f "Imputation flag for 'TM9616'"          
+_column(160 )   byte imp9618     %1f "Imputation flag for 'TM9618'"          
+_column(161 )   byte imp9620     %1f "Imputation flag for 'TM9620'"          
+_column(162 )   byte imp9622     %1f "Imputation flag for 'TM9622'"          
+_column(163 )   byte imp9624     %1f "Imputation flag for 'TM9624'"          
+_column(164 )   byte imp9630     %1f "Imputation flag for 'TM9630'"          
+_column(165 )   byte imp9634     %1f "Imputation flag for 'TM9634'"          
+_column(166 )   byte imp9638     %1f "Imputation flag for 'TM9638'"          
+_column(167 )   byte imp9642     %1f "Imputation flag for 'TM9642'"          
+_column(168 )   byte imp9646     %1f "Imputation flag for 'TM9646'"          
+_column(169 )   byte imp9650     %1f "Imputation flag for 'TM9650'"          
+_column(170 )   byte imp9654     %1f "Imputation flag for 'TM9654'"          
+_column(171 )   byte imp9658     %1f "Imputation flag for 'TM9658'"          
+_column(172 )   byte imp9662     %1f "Imputation flag for 'TM9662'"          
+_column(173 )   byte imp9666     %1f "Imputation flag for 'TM9666'"          
+_column(174 )   byte imp9670     %1f "Imputation flag for 'TM9670'"          
+_column(175 )   byte imp9674     %1f "Imputation flag for 'TM9674'"          
+_column(176 )   long tmtedfin    %5f "Total amount of educational assistance"
+
+}
+/*
+Copyright 2004 shared by the National Bureau of Economic Research and Jean Roth
+
+National Bureau of Economic Research.
+1050 Massachusetts Avenue
+Cambridge, MA 02138
+jroth@nber.org
+
+This program and all programs referenced in it are free software. You
+can redistribute the program or modify it under the terms of the GNU
+General Public License as published by the Free Software Foundation;
+either version 2 of the License, or (at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with this program; if not, write to the Free Software
+Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307
+USA.
+*/

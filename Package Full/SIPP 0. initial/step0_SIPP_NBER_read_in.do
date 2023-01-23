@@ -137,14 +137,7 @@ cd "${tempdata}"
 		end
 		//PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP
 
-************************
-** UNZIP DCT/NBER DOs***
-************************
 
-	cd "${extractcodedir}"
-		
-	cap n unzipfile sipp_nber_dodct.zip, replace	
-		
 
 ****************
 **** 1984 ******

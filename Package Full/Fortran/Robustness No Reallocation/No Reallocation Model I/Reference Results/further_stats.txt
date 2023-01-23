@@ -1,0 +1,25 @@
+  
+ 
+ STRONGER RELATIVE RESPONSE TO SEPARATIONS OF PRIME TO YOUNG, MODEL
+    (elasticity hp-filtered sep with hp-filtered productivity) 
+ sep young:  -1.89957611583683     
+ sep prime:  -3.14081292831525     
+ 
+ SLIGHTLY STRONGER REL. RESPONSE U RATE OF PRIME TO YOUNG, MODEL
+    (elasticity hp-filtered u with hp-filtered productivity) 
+ unempl young:  -3.60044241690454     
+ unempl prime:  -3.95321958446762     
+ 
+ mM ratio in the model
+min-Mean, all wages:                          3.2507
+min-Mean, controlling for age:                3.0799
+min-Mean, controlling for age and cycle:      3.0399
+1st ptile-Mean, all wages:                    2.3078
+1st ptile-Mean, controlling for age:          2.2195
+1st ptile-Mean, controlling for age and       2.2172
+ Preferred measure: min-Mean, controls age, cycle
+ 
+ model generates that u is more concentrated for prime-aged
+    ~~~~u prop window ~~~~    0.1706  --    0.1222
+    ~~~~uprop window yng ~    0.2693   --   0.1861
+    ~~~~uprop window prm ~    0.1489  --    0.1115

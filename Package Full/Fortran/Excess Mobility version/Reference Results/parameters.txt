@@ -1,0 +1,14 @@
+          reallocation cost c:    7.548988819
+               vacancy cost k:  125.732826233
+           unemp flow benefit:    0.843299687
+                          eta:    0.240893632
+                  delta_lowhc:    0.003363815
+                 delta_highhc:    0.000354100
+                 z_correction:    0.348722786
+                        rho_p:    0.998446107
+                      sigma_p:    0.001978150
+                        rho_z:    0.998227596
+                      sigma_z:    0.007074989
+                  x2 hc level:    1.180531859
+                  x3 hc level:    1.474373102
+           skill depreciation:    0.003869481
