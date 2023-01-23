@@ -1,0 +1,42 @@
+IPUMS USA Sample used: 
+
+Samples selected:
+      1980 5%
+            Note: 
+            Density of the full data file:  5.0%
+            Density of your extract: 5.0%
+
+      1990 5%
+            Note: 
+            Density of the full data file:  5.0%
+            Density of your extract: 5.0%
+
+      2000 5%
+            Note: 
+            Density of the full data file:  5.0%
+            Density of your extract: 5.0%
+
+      2005 ACS
+            Note: Does not include persons in group quarters.
+            Density of the full data file:  1.0%
+            Density of your extract: 1.0%
+
+File Type:                    rectangular
+Case Selection:               No
+  Variable                         Columns        Len   1980    1990    2000    2005    
+  YEAR                         H   1-4            4     X       X       X       X       
+  SAMPLE                       H   5-10           6     X       X       X       X       
+  SERIAL                       H  11-18           8     X       X       X       X       
+  HHWT                         H  19-28          10     X       X       X       X       
+  GQ                           H  29              1     X       X       X       X       
+  PERNUM                       P  30-33           4     X       X       X       X       
+  PERWT                        P  34-43          10     X       X       X       X       
+  OCC                          P  44-47           4     X       X       X       X       
+  OCC1990                      P  48-50           3     X       X       X       X       
+  OCC2010                      P  51-54           4     X       X       X       X       
+  OCCSOC                       P  55-60           6     .       .       X       X       
+  IND                          P  61-64           4     X       X       X       X       
+  IND1950                      P  65-67           3     X       X       X       X       
+  IND1990                      P  68-70           3     X       X       X       X       
+
+(IPUMS USA: Steven Ruggles, Sarah Flood, Ronald Goeken, Megan Schouweiler and Matthew Sobek. IPUMS USA: Version 12.0 [dataset]. Minneapolis, MN: IPUMS, 2022. https://doi.org/10.18128/D010.V12.0)
