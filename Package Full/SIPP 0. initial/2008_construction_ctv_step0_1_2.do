@@ -151,7 +151,7 @@ set varabbrev off
 					
 					
 					
-			cd $outputdata
+			cd "${outputdata}"
 			use 2008total_v${fileversion}.dta, clear
 			cap n gen ewk1bfor=nojobbeforew1
 			capture gen ehowmany=yearsnotworked6m
@@ -287,7 +287,7 @@ set varabbrev off
 				* recode occupations (according to the David Dorn's mapping into 1990 SOC, then aggregated)
 		
 			do "${codedir}\2004_08_recode_occdd_00_to_90_step0_1_2.do"
-			cd $outputdata
+			cd "${outputdata}"
 	
 	
 
@@ -871,7 +871,7 @@ set varabbrev off
 		
 		drop backup_eeno1 backup_eeno2 tsjdate1_backup tsjdate2_backup tejdate1_backup tejdate2_backup temp_ind previous_firmid2 previous_firmid1 previous_firmid1 samefirm
 		
-		cd $outputdata
+		cd "${outputdata}"
 		save "2008_corewave_occmob.dta", replace
 
 		// drop as many variables as possible (topical module stuff merged in later)
