@@ -43,17 +43,17 @@ iii. SIPP, step 0 Preparation, this downloads the SIPP data from the NBER and pr
 
 We want to acknowledge the shoulders we are standing on: 
 
-    This step uses Jean Roth's do and dct files, which (in slightly adapted form) are included under the GNU GPL license. We express our immense thanks for this work. The SIPP raw data, dct-files and do-files (that label variables, etc.) can be downloaded from https://www.nber.org/research/data/survey-income-and-program-participation-sipp
+This step uses Jean Roth's do and dct files, which (in slightly adapted form) are included under the GNU GPL license. We express our immense thanks for this work. The SIPP raw data, dct-files and do-files (that label variables, etc.) can be downloaded from https://www.nber.org/research/data/survey-income-and-program-participation-sipp
 
-    Our default crosswalk for occupational codes is from CPS IPUMS. (Sarah Flood, Miriam King, Renae Rodgers, Steven Ruggles, J. Robert Warren and Michael Westberry. Integrated Public Use Microdata Series, Current Population Survey: Version 10.0 [dataset]. Minneapolis, MN: IPUMS, 2022. https://doi.org/10.18128/D030.V10.0)
+Our default crosswalk for occupational codes is from CPS IPUMS. (Sarah Flood, Miriam King, Renae Rodgers, Steven Ruggles, J. Robert Warren and Michael Westberry. Integrated Public Use Microdata Series, Current Population Survey: Version 10.0 [dataset]. Minneapolis, MN: IPUMS, 2022. https://doi.org/10.18128/D030.V10.0)
 
-    Some of the occupational recoding also uses David Dorn's crosswalk files (David Autor and David Dorn. "The Growth of Low Skill Service Jobs and the Polarization of the U.S. Labor Market." American Economic Review, 103(5), 1553-1597, 2013.). 
+Some of the occupational recoding also uses David Dorn's crosswalk files (David Autor and David Dorn. "The Growth of Low Skill Service Jobs and the Polarization of the U.S. Labor Market." American Economic Review, 103(5), 1553-1597, 2013.). 
 
 iv. SIPP, step 1: establish the properties of occupational miscoding.
 
 v. SIPP, step 2: calculate the SIPP data moments used and discussed in the paper. This analysis has been split in more digestible chunks (we hope), in 12 steps (with some substeps). Master_CTV.do calls these, and provides some explanation about outputs in each step. 
 
-        To correlate labour market outcomes in the SIPP with vacancies, we use Regis Barnichon's Help Wanted Index (e.g. Barnichon, Regis. "Building a composite help-wanted index." Economics Letters 109.3 (2010): 175-178. and Barnichon, Regis, et al. "The ins and outs of forecasting unemployment: Using labor force flows to forecast the labor market." Brookings Papers on Economic Activity (2012): 83-131.)
+To correlate labour market outcomes in the SIPP with vacancies, we use Regis Barnichon's Help Wanted Index (e.g. Barnichon, Regis. "Building a composite help-wanted index." Economics Letters 109.3 (2010): 175-178. and Barnichon, Regis, et al. "The ins and outs of forecasting unemployment: Using labor force flows to forecast the labor market." Brookings Papers on Economic Activity (2012): 83-131.)
      
 
 vi. Computational Results Processing: bring the results of the computational models to the paper, possibly in combination/in comparison with the SIPP data 
@@ -63,12 +63,12 @@ Some of these steps are further covered in the README.txt inside each folder.
 ## 3. There are two points where another program is needed to do a calculation
 
 
-        i. Matlab or Mathematica to calculate the de-garbling matrix from the miscoding matrix. For details, see `./Replication/SIPP 1. Miscoding/Readme.txt`
-        
-        ii. The Tramo/Seats procedure to deal with timeseries with gaps before. 
-                We use the TSW+ program for this, which is included in this replication package (freeware, see license file for license info).It should also be available on the Bank of Spain website, but our most recent attempts ran into link rot. We have put an installation file online, https://github.com/CTVproject/Replication/raw/main/TRAMO-SEATS/TSW%2B%20x64%20.msi . 
-    
-                A detailed description to use TRAMO/SEATS (by using TSW+) in the context of our replication package is provided in the main folder of this replication package. 
+i. Matlab or Mathematica to calculate the de-garbling matrix from the miscoding matrix. For details, see `./Replication/SIPP 1. Miscoding/Readme.txt`
+
+ii. The Tramo/Seats procedure to deal with timeseries with gaps before. 
+        We use the TSW+ program for this, which is included in this replication package (freeware, see license file for license info).It should also be available on the Bank of Spain website, but our most recent attempts ran into link rot. We have put an installation file online, https://github.com/CTVproject/Replication/raw/main/TRAMO-SEATS/TSW%2B%20x64%20.msi . 
+
+A detailed description to use TRAMO/SEATS (by using TSW+) in the context of our replication package is provided in the main folder of this replication package. 
 
 
 The overall running time (on a Dell 7760 mobile workstation) lies in the order of magnitude of a day (a little bit less than it) for the data analysis; around 25 minutes for the computation of the full model, around 10 minutes for the computation of the excess mobility model. Some of the robustness runs are somewhat faster.
