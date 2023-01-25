@@ -100,8 +100,7 @@ do "${step1codedir}/Ginv_matrices.do"
 //==========================================
 
 
-*use "${outputdata}/reduced_u_n_ctv.dta", clear
-use "H:\replication_aux\output/reduced_u_n_ctv.dta", clear
+use "${outputdata}/reduced_u_n_ctv.dta", clear
 
 
 //PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP
