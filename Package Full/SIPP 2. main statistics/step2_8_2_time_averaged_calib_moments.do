@@ -78,7 +78,7 @@
 	global lstartdate=c(current_date)
 	display "started at ${lstarttime} on ${lstartdate}"
 
-	cd ${tempdata}
+	cd "${tempdata}"
 
 	quietly do "${step2codedir}/aux_directory/aux_programs.do"
 	quietly do "${step1codedir}/Ginv_matrices.do"
