@@ -17,7 +17,7 @@
 
 * Computation Results Processing: contains the do-files that combine model and data output for tables and figures in the paper. Also copies results of the different versions to the results directory with the appropriate names (to be able to distinguish them, and know where they turn up in the paper)
 
-* CPS and SIPP subfolders contain the do-files to each of the two different data source. The work done on the SIPP is by far more extensive, and will take most time to complete.  
+* CPS and SIPP subfolders contain the do-files to each of the two different data sources. The work done on the SIPP is more extensive, and will take most time to run. It is split over 3 subfolders, and a number of different steps (the top layer of which is spelled out in `master_CTV.do`.    
 
 
 ## 2. How to Run the Complete Replication
@@ -25,7 +25,7 @@
 
 1. Run the six Fortran programs inside the Fortran folder, so the results of these runs can be combined with the subsequent data analysis. For more details about how to do this, see README.txt in Fortran Folder.
 
-2. Run the master_CTV.do file in STATA. BEFORE RUNNING, SET THE CURRENT WORKING DIRECTORY in STATA to the root directory of the replication package, then run master_CTV.do; or better set the 'workingdir' GLOBAL in the master_CTV.do file to the root folder of the replication package, to master_CTV.do file with setting the current working directory inside stata itself. The results produced by master_CTV.do are covered in the README.md/ README.pdf in the Results folder.
+2. Running the `master_CTV.do` file in STATA: BEFORE RUNNING, SET THE CURRENT WORKING DIRECTORY in STATA to the root directory of the replication package, then run master_CTV.do; or better set the 'workingdir' GLOBAL in the master_CTV.do file to the root folder of the replication package, to master_CTV.do file with setting the current working directory inside stata itself. The results produced by master_CTV.do are covered in the README.md/ README.pdf in the Results folder.
 
 This do file governs the construction of the relevant SIPP datasets from `scratch', by downloading the raw SIPP data from the NBER, converting these in dtas, and selecting and defining variables for our goals. Sometimes, it appears, the downloading can get disrupted (or not even start), this is not necessarily an issue of the do-file (we think). Overall, building our datasets from the original data costs a lot of space (although improvements can be made to the step0 cleaning code per panel!), about 100-200Gb. The datasets we work with, ultimately, are a lot smaller. 
 
