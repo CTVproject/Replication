@@ -69,7 +69,7 @@
 	global lstartdate=c(current_date)
 	display "started at ${lstarttime} on ${lstartdate}"
 
-cd ${tempdata}
+cd "${tempdata}"
 
 *use "H:\laptop beast hdd\data\u_n_temp_aug2017.dta", clear
 use "${outputdata}/reduced_u_n_ctv.dta", clear
